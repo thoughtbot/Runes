@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A8C7DE81A5F58330050914C /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8C7DE71A5F58330050914C /* Sequence.swift */; };
+		4A8C7DE91A5F58330050914C /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8C7DE71A5F58330050914C /* Sequence.swift */; };
 		F802D4D81A5F218E005E236C /* Runes.h in Headers */ = {isa = PBXBuildFile; fileRef = F802D4D71A5F218E005E236C /* Runes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F802D4EF1A5F2341005E236C /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802D4EE1A5F2341005E236C /* Operators.swift */; };
 		F802D4F11A5F23BE005E236C /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802D4F01A5F23BE005E236C /* Optional.swift */; };
@@ -16,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A8C7DE71A5F58330050914C /* Sequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
 		F802D4D21A5F218E005E236C /* Runes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Runes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F802D4D61A5F218E005E236C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F802D4D71A5F218E005E236C /* Runes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Runes.h; sourceTree = "<group>"; };
@@ -64,6 +67,7 @@
 			children = (
 				F802D4EE1A5F2341005E236C /* Operators.swift */,
 				F802D4F01A5F23BE005E236C /* Optional.swift */,
+				4A8C7DE71A5F58330050914C /* Sequence.swift */,
 				F802D4D51A5F218E005E236C /* Supporting Files */,
 			);
 			path = Source;
@@ -195,6 +199,7 @@
 			files = (
 				F802D4EF1A5F2341005E236C /* Operators.swift in Sources */,
 				F802D4F11A5F23BE005E236C /* Optional.swift in Sources */,
+				4A8C7DE81A5F58330050914C /* Sequence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +209,7 @@
 			files = (
 				F86B2E251A5F2BA400C3B8BD /* Operators.swift in Sources */,
 				F86B2E261A5F2BA400C3B8BD /* Optional.swift in Sources */,
+				4A8C7DE91A5F58330050914C /* Sequence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
