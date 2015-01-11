@@ -3,9 +3,19 @@ public func <^><T, U>(f: T -> U, a: [T]) -> [U] {
 }
 
 public func <*><T, U>(fs: [T -> U], a: [T]) -> [U] {
-    return fs >>- { f in a.map(f) }
+    return a.apply(fs)
 }
 
 public func >>-<T, U>(a: [T], f: T -> [U]) -> [U] {
-    return a.reduce([]) { bs, a in bs + f(a) }
+    return a.flatMap(f)
+}
+
+extension Array {
+    func apply<U>(fs: [T -> U]) -> [U] {
+        return fs.flatMap { f in self.map(f) }
+    }
+
+    func flatMap<U>(f: T -> [U]) -> [U] {
+        return reduce([]) { bs, a in bs + f(a) }
+    }
 }
