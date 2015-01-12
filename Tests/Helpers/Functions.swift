@@ -9,3 +9,11 @@ func compose<A, B, C>(fa: A -> B, fb: B -> C) -> A -> C {
 func curry<A, B, C>(f: (A, B) -> C) -> A -> B -> C {
     return { a in { b in f(a, b) }}
 }
+
+func append(x: String) -> String {
+    return x + "bar"
+}
+
+func prepend(x: String) -> String {
+    return "baz" + x
+}
