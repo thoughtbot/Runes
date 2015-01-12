@@ -28,7 +28,26 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F8624C251A645A9600C883B3"
+               BuildableName = "Runes-iOS Tests.xctest"
+               BlueprintName = "Runes-iOS Tests"
+               ReferencedContainer = "container:Runes.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "F802D4D11A5F218E005E236C"
+            BuildableName = "Runes.framework"
+            BlueprintName = "Runes-iOS"
+            ReferencedContainer = "container:Runes.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
