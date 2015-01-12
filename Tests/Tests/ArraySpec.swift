@@ -6,11 +6,11 @@ private func pure<A>(a: A) -> [A] {
     return [a]
 }
 
-private func mAppend(x: String) -> [String] {
+private func pureAppend(x: String) -> [String] {
     return pure(append(x))
 }
 
-private func mPrepend(x: String) -> [String] {
+private func purePrepend(x: String) -> [String] {
     return pure(prepend(x))
 }
 
@@ -79,8 +79,8 @@ class ArraySpec: QuickSpec {
                 // return x >>= f = f x
                 it("obeys the left identity law") {
                     let foo = "foo"
-                    let lhs = pure(foo) >>- mAppend
-                    let rhs = mAppend(foo)
+                    let lhs = pure(foo) >>- pureAppend
+                    let rhs = pureAppend(foo)
 
                     expect(lhs).to(equal(rhs))
                 }
@@ -97,8 +97,8 @@ class ArraySpec: QuickSpec {
                 // (m >>= f) >>= g = m >>= (\x -> f x >>= g)
                 it("obeys the associativity law") {
                     let array = ["foo"]
-                    let lhs = (array >>- mAppend) >>- mPrepend
-                    let rhs = array >>- { x in mAppend(x) >>- mPrepend }
+                    let lhs = (array >>- pureAppend) >>- purePrepend
+                    let rhs = array >>- { x in pureAppend(x) >>- purePrepend }
 
                     expect(lhs).to(equal(rhs))
                 }

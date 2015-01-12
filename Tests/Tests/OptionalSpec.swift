@@ -6,11 +6,11 @@ private func pure<A>(a: A) -> A? {
     return .Some(a)
 }
 
-private func mAppend(x: String) -> String? {
+private func pureAppend(x: String) -> String? {
     return pure(append(x))
 }
 
-private func mPrepend(x: String) -> String? {
+private func purePrepend(x: String) -> String? {
     return pure(prepend(x))
 }
 
@@ -79,7 +79,7 @@ class OptionalSpec: QuickSpec {
                 // return x >>= f = f x
                 it("obeys the left identity law") {
                     let foo = "foo"
-                    let lhs = pure(foo) >>- mAppend
+                    let lhs = pure(foo) >>- pureAppend
                     let rhs = append(foo)
 
                     expect(lhs).to(equal(rhs))
@@ -97,8 +97,8 @@ class OptionalSpec: QuickSpec {
                 // (m >>= f) >>= g = m >>= (\x -> f x >>= g)
                 it("obeys the associativity law") {
                     let optional = Optional.Some("foo")
-                    let lhs = (optional >>- mAppend) >>- mPrepend
-                    let rhs = optional >>- { x in mAppend(x) >>- mPrepend }
+                    let lhs = (optional >>- pureAppend) >>- purePrepend
+                    let rhs = optional >>- { x in pureAppend(x) >>- purePrepend }
 
                     expect(lhs).to(equal(rhs))
                 }
