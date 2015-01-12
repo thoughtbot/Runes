@@ -46,9 +46,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F86B2E141A5F2B8D00C3B8BD"
-               BuildableName = "Runes-MacTests.xctest"
-               BlueprintName = "Runes-MacTests"
+               BlueprintIdentifier = "F8624C441A645C9500C883B3"
+               BuildableName = "Runes-Mac Tests.xctest"
+               BlueprintName = "Runes-Mac Tests"
                ReferencedContainer = "container:Runes.xcodeproj">
             </BuildableReference>
          </TestableReference>

@@ -18,6 +18,12 @@
 		F8624C3D1A645B2C00C883B3 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8624C3B1A645B2C00C883B3 /* Quick.framework */; };
 		F8624C3F1A645C1A00C883B3 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8624C3A1A645B2C00C883B3 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F8624C401A645C1A00C883B3 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8624C3B1A645B2C00C883B3 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F8624C4B1A645C9500C883B3 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F86B2E0B1A5F2B8D00C3B8BD /* Runes.framework */; };
+		F8624C511A645CB900C883B3 /* OptionalSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8624C371A645B0700C883B3 /* OptionalSpec.swift */; };
+		F8624C561A645D0300C883B3 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8624C541A645D0300C883B3 /* Nimble.framework */; };
+		F8624C571A645D0300C883B3 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8624C551A645D0300C883B3 /* Quick.framework */; };
+		F8624C591A645D1400C883B3 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8624C541A645D0300C883B3 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F8624C5A1A645D1400C883B3 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8624C551A645D0300C883B3 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F86B2E241A5F2B9E00C3B8BD /* Runes.h in Headers */ = {isa = PBXBuildFile; fileRef = F802D4D71A5F218E005E236C /* Runes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F86B2E251A5F2BA400C3B8BD /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802D4EE1A5F2341005E236C /* Operators.swift */; };
 		F86B2E261A5F2BA400C3B8BD /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802D4F01A5F23BE005E236C /* Optional.swift */; };
@@ -31,6 +37,13 @@
 			remoteGlobalIDString = F802D4D11A5F218E005E236C;
 			remoteInfo = "Runes-iOS";
 		};
+		F8624C4C1A645C9500C883B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F802D4C91A5F218E005E236C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F86B2E0A1A5F2B8D00C3B8BD;
+			remoteInfo = "Runes-Mac";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +55,17 @@
 			files = (
 				F8624C3F1A645C1A00C883B3 /* Nimble.framework in CopyFiles */,
 				F8624C401A645C1A00C883B3 /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8624C581A645D0E00C883B3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F8624C591A645D1400C883B3 /* Nimble.framework in CopyFiles */,
+				F8624C5A1A645D1400C883B3 /* Quick.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +83,9 @@
 		F8624C371A645B0700C883B3 /* OptionalSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalSpec.swift; sourceTree = "<group>"; };
 		F8624C3A1A645B2C00C883B3 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
 		F8624C3B1A645B2C00C883B3 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = SOURCE_ROOT; };
+		F8624C451A645C9500C883B3 /* Runes-Mac Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Runes-Mac Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8624C541A645D0300C883B3 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = SOURCE_ROOT; };
+		F8624C551A645D0300C883B3 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = SOURCE_ROOT; };
 		F86B2E0B1A5F2B8D00C3B8BD /* Runes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Runes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -77,6 +104,16 @@
 				F8624C2C1A645A9600C883B3 /* Runes.framework in Frameworks */,
 				F8624C3C1A645B2C00C883B3 /* Nimble.framework in Frameworks */,
 				F8624C3D1A645B2C00C883B3 /* Quick.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8624C421A645C9500C883B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8624C4B1A645C9500C883B3 /* Runes.framework in Frameworks */,
+				F8624C561A645D0300C883B3 /* Nimble.framework in Frameworks */,
+				F8624C571A645D0300C883B3 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +142,7 @@
 				F802D4D21A5F218E005E236C /* Runes.framework */,
 				F86B2E0B1A5F2B8D00C3B8BD /* Runes.framework */,
 				F8624C261A645A9600C883B3 /* Runes-iOS Tests.xctest */,
+				F8624C451A645C9500C883B3 /* Runes-Mac Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,10 +196,28 @@
 		F8624C391A645B1300C883B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F8624C531A645CF400C883B3 /* OS X */,
+				F8624C521A645CE200C883B3 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8624C521A645CE200C883B3 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
 				F8624C3A1A645B2C00C883B3 /* Nimble.framework */,
 				F8624C3B1A645B2C00C883B3 /* Quick.framework */,
 			);
-			name = Frameworks;
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F8624C531A645CF400C883B3 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				F8624C541A645D0300C883B3 /* Nimble.framework */,
+				F8624C551A645D0300C883B3 /* Quick.framework */,
+			);
+			name = "OS X";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +279,25 @@
 			productReference = F8624C261A645A9600C883B3 /* Runes-iOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F8624C441A645C9500C883B3 /* Runes-Mac Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8624C4E1A645C9500C883B3 /* Build configuration list for PBXNativeTarget "Runes-Mac Tests" */;
+			buildPhases = (
+				F8624C411A645C9500C883B3 /* Sources */,
+				F8624C421A645C9500C883B3 /* Frameworks */,
+				F8624C431A645C9500C883B3 /* Resources */,
+				F8624C581A645D0E00C883B3 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8624C4D1A645C9500C883B3 /* PBXTargetDependency */,
+			);
+			name = "Runes-Mac Tests";
+			productName = "Runes-Mac Tests";
+			productReference = F8624C451A645C9500C883B3 /* Runes-Mac Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F86B2E0A1A5F2B8D00C3B8BD /* Runes-Mac */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F86B2E1E1A5F2B8D00C3B8BD /* Build configuration list for PBXNativeTarget "Runes-Mac" */;
@@ -256,6 +331,9 @@
 					F8624C251A645A9600C883B3 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
+					F8624C441A645C9500C883B3 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
 					F86B2E0A1A5F2B8D00C3B8BD = {
 						CreatedOnToolsVersion = 6.2;
 					};
@@ -276,6 +354,7 @@
 				F802D4D11A5F218E005E236C /* Runes-iOS */,
 				F86B2E0A1A5F2B8D00C3B8BD /* Runes-Mac */,
 				F8624C251A645A9600C883B3 /* Runes-iOS Tests */,
+				F8624C441A645C9500C883B3 /* Runes-Mac Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -289,6 +368,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F8624C241A645A9600C883B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8624C431A645C9500C883B3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -323,6 +409,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F8624C411A645C9500C883B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8624C511A645CB900C883B3 /* OptionalSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F86B2E061A5F2B8D00C3B8BD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -340,6 +434,11 @@
 			isa = PBXTargetDependency;
 			target = F802D4D11A5F218E005E236C /* Runes-iOS */;
 			targetProxy = F8624C2D1A645A9600C883B3 /* PBXContainerItemProxy */;
+		};
+		F8624C4D1A645C9500C883B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F86B2E0A1A5F2B8D00C3B8BD /* Runes-Mac */;
+			targetProxy = F8624C4C1A645C9500C883B3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -499,6 +598,45 @@
 			};
 			name = Release;
 		};
+		F8624C4F1A645C9500C883B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Tests/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F8624C501A645C9500C883B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = Tests/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		F86B2E1F1A5F2B8D00C3B8BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -568,6 +706,14 @@
 			buildConfigurations = (
 				F8624C2F1A645A9600C883B3 /* Debug */,
 				F8624C301A645A9600C883B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F8624C4E1A645C9500C883B3 /* Build configuration list for PBXNativeTarget "Runes-Mac Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8624C4F1A645C9500C883B3 /* Debug */,
+				F8624C501A645C9500C883B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
