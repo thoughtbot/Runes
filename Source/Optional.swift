@@ -10,6 +10,10 @@ public func >>-<T, U>(a: T?, f: T -> U?) -> U? {
     return a.flatMap(f)
 }
 
+public func pure<T>(a: T) -> T? {
+    return .Some(a)
+}
+
 extension Optional {
     func apply<U>(f: (T -> U)?) -> U? {
         switch (self, f) {
