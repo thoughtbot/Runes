@@ -1,3 +1,5 @@
+import Fox
+
 func id<A>(a: A) -> A {
     return a
 }
@@ -16,4 +18,10 @@ func append(x: String) -> String {
 
 func prepend(x: String) -> String {
     return "baz" + x
+}
+
+func generateString(block:String -> Bool) -> FOXGenerator {
+    return forAll(string()) { string in
+        return block(string as String)
+    }
 }

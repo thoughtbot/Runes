@@ -1,5 +1,5 @@
 import Quick
-import Nimble
+import Fox
 import Runes
 
 private func pure<A>(a: A) -> A? {
@@ -14,93 +14,126 @@ private func purePrepend(x: String) -> String? {
     return pure(prepend(x))
 }
 
+private func generateOptional(block: String? -> Bool) -> FOXGenerator {
+    return forAll(FOXOptional(string())) { optional in
+        return block(optional as String?)
+    }
+}
+
 class OptionalSpec: QuickSpec {
     override func spec() {
         describe("Optional") {
             describe("map") {
                 // fmap id = id
                 it("obeys the identity law") {
-                    let optional = Optional.Some("fco")
-                    let lhs = id <^> optional
-                    let rhs = optional
+                    let property = generateOptional() { optional in
+                        let lhs = id <^> optional
+                        let rhs = optional
 
-                    expect(lhs).to(equal(rhs))
+                        return lhs == rhs
+                    }
+
+                    Fox.Assert(property)
                 }
 
                 // fmap (g . h) = (fmap g) . (fmap h)
                 it("obeys the function composition law") {
-                    let optional = Optional.Some("foo")
-                    let lhs = compose(append, prepend) <^> optional
-                    let rhs = compose(curry(<^>)(append), curry(<^>)(prepend))(optional)
+                    let property = generateOptional() { optional in
+                        let lhs = compose(append, prepend) <^> optional
+                        let rhs = compose(curry(<^>)(append), curry(<^>)(prepend))(optional)
 
-                    expect(lhs).to(equal(rhs))
+                        return lhs == rhs
+                    }
+
+                    Fox.Assert(property)
                 }
             }
 
             describe("apply") {
                 // pure id <*> v = v
                 it("obeys the identity law") {
-                    let optional = Optional.Some("foo")
-                    let lhs = pure(id) <*> optional
-                    let rhs = optional
+                    let property = generateOptional() { optional in
+                        let lhs = pure(id) <*> optional
+                        let rhs = optional
 
-                    expect(lhs).to(equal(rhs))
+                        return lhs == rhs
+                    }
+
+                    Fox.Assert(property)
                 }
 
                 // pure f <*> pure x = pure (f x)
                 it("obeys the homomorphism law") {
-                    let foo = "foo"
-                    let lhs = pure(append) <*> pure(foo)
-                    let rhs = pure(append(foo))
+                    let property = generateString() { string in
+                        let lhs = pure(append) <*> pure(string)
+                        let rhs = pure(append(string))
 
-                    expect(lhs).to(equal(rhs))
+                        return rhs == lhs
+                    }
+
+                    Fox.Assert(property)
                 }
 
                 // u <*> pure y = pure ($ y) <*> u
                 it("obeys the interchange law") {
-                    let foo = "foo"
-                    let lhs = pure(append) <*> pure(foo)
-                    let rhs = pure({ $0(foo) }) <*> pure(append)
+                    let property = generateString() { string in
+                        let lhs = pure(append) <*> pure(string)
+                        let rhs = pure({ $0(string) }) <*> pure(append)
 
-                    expect(lhs).to(equal(rhs))
+                        return lhs == rhs
+                    }
+
+                    Fox.Assert(property)
                 }
 
                 // u <*> (v <*> w) = pure (.) <*> u <*> v <*> w
                 it("obeys the composition law") {
-                    let optional = Optional.Some("foo")
-                    let lhs = pure(append) <*> (pure(prepend) <*> optional)
-                    let rhs = pure(curry(compose)) <*> pure(append)  <*> pure(prepend) <*> optional
+                    let property = generateOptional() { optional in
+                        let lhs = pure(append) <*> (pure(prepend) <*> optional)
+                        let rhs = pure(curry(compose)) <*> pure(append)  <*> pure(prepend) <*> optional
 
-                    expect(lhs).to(equal(rhs))
+                        return lhs == rhs
+                    }
+
+                    Fox.Assert(property)
                 }
             }
 
             describe("flatMap") {
                 // return x >>= f = f x
                 it("obeys the left identity law") {
-                    let foo = "foo"
-                    let lhs = pure(foo) >>- pureAppend
-                    let rhs = append(foo)
+                    let property = generateString() { string in
+                        let lhs = pure(string) >>- pureAppend
+                        let rhs = pureAppend(string)
 
-                    expect(lhs).to(equal(rhs))
+                        return lhs == rhs
+                    }
+
+                    Fox.Assert(property)
                 }
 
                 // m >>= return = m
                 it("obeys the right identity law") {
-                    let optional = Optional.Some("foo")
-                    let lhs = optional >>- pure
-                    let rhs = optional
+                    let property = generateOptional() { optional in
+                        let lhs = optional >>- pure
+                        let rhs = optional
 
-                    expect(lhs).to(equal(rhs))
+                        return lhs == rhs
+                    }
+
+                    Fox.Assert(property)
                 }
 
                 // (m >>= f) >>= g = m >>= (\x -> f x >>= g)
                 it("obeys the associativity law") {
-                    let optional = Optional.Some("foo")
-                    let lhs = (optional >>- pureAppend) >>- purePrepend
-                    let rhs = optional >>- { x in pureAppend(x) >>- purePrepend }
+                    let property = generateOptional() { optional in
+                        let lhs = (optional >>- pureAppend) >>- purePrepend
+                        let rhs = optional >>- { x in pureAppend(x) >>- purePrepend }
 
-                    expect(lhs).to(equal(rhs))
+                        return lhs == rhs
+                    }
+
+                    Fox.Assert(property)
                 }
             }
         }

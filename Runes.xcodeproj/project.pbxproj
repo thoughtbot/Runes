@@ -14,15 +14,11 @@
 		F802D4F11A5F23BE005E236C /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802D4F01A5F23BE005E236C /* Optional.swift */; };
 		F8624C2C1A645A9600C883B3 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F802D4D21A5F218E005E236C /* Runes.framework */; };
 		F8624C381A645B0700C883B3 /* OptionalSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8624C371A645B0700C883B3 /* OptionalSpec.swift */; };
-		F8624C3C1A645B2C00C883B3 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8624C3A1A645B2C00C883B3 /* Nimble.framework */; };
 		F8624C3D1A645B2C00C883B3 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8624C3B1A645B2C00C883B3 /* Quick.framework */; };
-		F8624C3F1A645C1A00C883B3 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8624C3A1A645B2C00C883B3 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F8624C401A645C1A00C883B3 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8624C3B1A645B2C00C883B3 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F8624C4B1A645C9500C883B3 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F86B2E0B1A5F2B8D00C3B8BD /* Runes.framework */; };
 		F8624C511A645CB900C883B3 /* OptionalSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8624C371A645B0700C883B3 /* OptionalSpec.swift */; };
-		F8624C561A645D0300C883B3 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8624C541A645D0300C883B3 /* Nimble.framework */; };
 		F8624C571A645D0300C883B3 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8624C551A645D0300C883B3 /* Quick.framework */; };
-		F8624C591A645D1400C883B3 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8624C541A645D0300C883B3 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F8624C5A1A645D1400C883B3 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8624C551A645D0300C883B3 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F8624C5D1A647E6F00C883B3 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8624C5C1A647E6F00C883B3 /* Functions.swift */; };
 		F8624C5E1A647E7300C883B3 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8624C5C1A647E6F00C883B3 /* Functions.swift */; };
@@ -31,6 +27,10 @@
 		F86B2E241A5F2B9E00C3B8BD /* Runes.h in Headers */ = {isa = PBXBuildFile; fileRef = F802D4D71A5F218E005E236C /* Runes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F86B2E251A5F2BA400C3B8BD /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802D4EE1A5F2341005E236C /* Operators.swift */; };
 		F86B2E261A5F2BA400C3B8BD /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802D4F01A5F23BE005E236C /* Optional.swift */; };
+		F8AAD42E1A656EF800271271 /* Fox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AAD42D1A656EF800271271 /* Fox.framework */; };
+		F8AAD4301A656F0000271271 /* Fox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AAD42F1A656F0000271271 /* Fox.framework */; };
+		F8AAD4311A656F1A00271271 /* Fox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8AAD42F1A656F0000271271 /* Fox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F8AAD4321A656F1D00271271 /* Fox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8AAD42D1A656EF800271271 /* Fox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +57,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F8624C3F1A645C1A00C883B3 /* Nimble.framework in CopyFiles */,
 				F8624C401A645C1A00C883B3 /* Quick.framework in CopyFiles */,
+				F8AAD4321A656F1D00271271 /* Fox.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,8 +68,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F8624C591A645D1400C883B3 /* Nimble.framework in CopyFiles */,
 				F8624C5A1A645D1400C883B3 /* Quick.framework in CopyFiles */,
+				F8AAD4311A656F1A00271271 /* Fox.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,14 +85,14 @@
 		F8624C261A645A9600C883B3 /* Runes-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Runes-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8624C341A645AB900C883B3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8624C371A645B0700C883B3 /* OptionalSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalSpec.swift; sourceTree = "<group>"; };
-		F8624C3A1A645B2C00C883B3 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
 		F8624C3B1A645B2C00C883B3 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = SOURCE_ROOT; };
 		F8624C451A645C9500C883B3 /* Runes-Mac Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Runes-Mac Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8624C541A645D0300C883B3 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = SOURCE_ROOT; };
 		F8624C551A645D0300C883B3 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = SOURCE_ROOT; };
 		F8624C5C1A647E6F00C883B3 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		F8624C5F1A647EE400C883B3 /* ArraySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArraySpec.swift; sourceTree = "<group>"; };
 		F86B2E0B1A5F2B8D00C3B8BD /* Runes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Runes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8AAD42D1A656EF800271271 /* Fox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fox.framework; path = Carthage/Build/iOS/Fox.framework; sourceTree = SOURCE_ROOT; };
+		F8AAD42F1A656F0000271271 /* Fox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fox.framework; path = Carthage/Build/Mac/Fox.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +108,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8624C2C1A645A9600C883B3 /* Runes.framework in Frameworks */,
-				F8624C3C1A645B2C00C883B3 /* Nimble.framework in Frameworks */,
+				F8AAD42E1A656EF800271271 /* Fox.framework in Frameworks */,
 				F8624C3D1A645B2C00C883B3 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,7 +118,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8624C4B1A645C9500C883B3 /* Runes.framework in Frameworks */,
-				F8624C561A645D0300C883B3 /* Nimble.framework in Frameworks */,
+				F8AAD4301A656F0000271271 /* Fox.framework in Frameworks */,
 				F8624C571A645D0300C883B3 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,7 +213,7 @@
 		F8624C521A645CE200C883B3 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				F8624C3A1A645B2C00C883B3 /* Nimble.framework */,
+				F8AAD42D1A656EF800271271 /* Fox.framework */,
 				F8624C3B1A645B2C00C883B3 /* Quick.framework */,
 			);
 			name = iOS;
@@ -222,7 +222,7 @@
 		F8624C531A645CF400C883B3 /* OS X */ = {
 			isa = PBXGroup;
 			children = (
-				F8624C541A645D0300C883B3 /* Nimble.framework */,
+				F8AAD42F1A656F0000271271 /* Fox.framework */,
 				F8624C551A645D0300C883B3 /* Quick.framework */,
 			);
 			name = "OS X";
@@ -728,6 +728,7 @@
 				F8624C301A645A9600C883B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F8624C4E1A645C9500C883B3 /* Build configuration list for PBXNativeTarget "Runes-Mac Tests" */ = {
 			isa = XCConfigurationList;
@@ -736,6 +737,7 @@
 				F8624C501A645C9500C883B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F86B2E1E1A5F2B8D00C3B8BD /* Build configuration list for PBXNativeTarget "Runes-Mac" */ = {
 			isa = XCConfigurationList;
