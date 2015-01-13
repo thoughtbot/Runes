@@ -2,10 +2,6 @@ import Quick
 import Fox
 import Runes
 
-private func pure<A>(a: A) -> A? {
-    return .Some(a)
-}
-
 private func pureAppend(x: String) -> String? {
     return pure(append(x))
 }
@@ -65,8 +61,8 @@ class OptionalSpec: QuickSpec {
                 // pure f <*> pure x = pure (f x)
                 it("obeys the homomorphism law") {
                     let property = generateString() { string in
-                        let lhs = pure(append) <*> pure(string)
-                        let rhs = pure(append(string))
+                        let lhs: String? = pure(append) <*> pure(string)
+                        let rhs: String? = pure(append(string))
 
                         return rhs == lhs
                     }
@@ -77,8 +73,8 @@ class OptionalSpec: QuickSpec {
                 // u <*> pure y = pure ($ y) <*> u
                 it("obeys the interchange law") {
                     let property = generateString() { string in
-                        let lhs = pure(append) <*> pure(string)
-                        let rhs = pure({ $0(string) }) <*> pure(append)
+                        let lhs: String? = pure(append) <*> pure(string)
+                        let rhs: String? = pure({ $0(string) }) <*> pure(append)
 
                         return lhs == rhs
                     }
