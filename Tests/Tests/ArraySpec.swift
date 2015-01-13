@@ -2,14 +2,6 @@ import Quick
 import Fox
 import Runes
 
-private func pureAppend(x: String) -> [String] {
-    return pure(append(x))
-}
-
-private func purePrepend(x: String) -> [String] {
-    return pure(prepend(x))
-}
-
 private func generateArray(block:[String] -> Bool) -> FOXGenerator {
     return forAll(array(string())) { array in
         return block(array as [String])
@@ -99,8 +91,8 @@ class ArraySpec: QuickSpec {
                 // return x >>= f = f x
                 it("obeys the left identity law") {
                     let property = generateString() { string in
-                        let lhs = pure(string) >>- pureAppend
-                        let rhs = pureAppend(string)
+                        let lhs: [String] = pure(string) >>- compose(append, pure)
+                        let rhs: [String] = compose(append, pure)(string)
 
                         return lhs == rhs
                     }
@@ -123,8 +115,8 @@ class ArraySpec: QuickSpec {
                 // (m >>= f) >>= g = m >>= (\x -> f x >>= g)
                 it("obeys the associativity law") {
                     let property = generateArray() { array in
-                        let lhs = (array >>- pureAppend) >>- purePrepend
-                        let rhs = array >>- { x in pureAppend(x) >>- purePrepend }
+                        let lhs = (array >>- compose(append, pure)) >>- compose(prepend, pure)
+                        let rhs = array >>- { x in compose(append, pure)(x) >>- compose(prepend, pure) }
 
                         return lhs == rhs
                     }
