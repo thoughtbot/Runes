@@ -40,6 +40,11 @@ public func >>-<T, U>(a: [T], f: T -> [U]) -> [U] {
     return a.flatMap(f)
 }
 
+@availability(*, unavailable, message="function (T -> U) is not equal to function (T -> [U])")
+public func >>-<T, U>(a: [T], f: T -> U) -> [U] {
+    return a.map(f)
+}
+
 /**
     Wrap a value in a minimal context of []
 
