@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   spec.name = 'Runes'
   spec.version = '1.1.1'
-  spec.summary = 'Indecipherable symbols that some people claim have actual meaning.'
+  spec.summary = 'Functional operators for Swift'
   spec.homepage = 'https://github.com/thoughtbot/runes'
   spec.license = { :type => 'MIT', :file => 'LICENSE' }
   spec.author = {
