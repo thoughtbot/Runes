@@ -10,7 +10,17 @@ Indecipherable symbols that some people claim have actual meaning.
 
 ### [CocoaPods](http://cocoapods.org/) ###
 
-_coming soon_
+__DISCLAIMER: CocoaPods doesn't officially support Swift projects yet. Use the
+pre-release version at your own discretion.__
+
+Add the following to your
+[Podfile](http://guides.cocoapods.org/using/the-podfile.html):
+
+```ruby
+pod 'Runes', :git => 'https://github.com/thoughtbot/runes'
+```
+
+Then run `pod install` with CocoaPods 0.36 or newer.
 
 ## What's included? ##
 
