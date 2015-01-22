@@ -1,2 +1,4 @@
-github "jeffh/Fox" "d4cf93b5f295a3888adb9f09b252507a4d7b9d90"
+github "jeffh/Fox" "fe43cdd37d609e11767d712bf27c8454e1d1c4a5"
+github "Quick/Nimble" "v0.2.0"
 github "Quick/Quick" "v0.2.2"
+github "thoughtbot/NimbleFox" "v1.0.0"

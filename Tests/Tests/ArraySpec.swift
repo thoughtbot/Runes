@@ -1,5 +1,7 @@
-import Quick
 import Fox
+import Nimble
+import NimbleFox
+import Quick
 import Runes
 
 private func generateArray(block:[String] -> Bool) -> FOXGenerator {
@@ -21,7 +23,7 @@ class ArraySpec: QuickSpec {
                         return lhs == rhs
                     }
 
-                    Fox.Assert(property)
+                    expect(property).to(hold())
                 }
 
                 // fmap (g . h) = (fmap g) . (fmap h)
@@ -33,7 +35,7 @@ class ArraySpec: QuickSpec {
                         return lhs == rhs
                     }
 
-                    Fox.Assert(property)
+                    expect(property).to(hold())
                 }
             }
 
@@ -47,7 +49,7 @@ class ArraySpec: QuickSpec {
                         return lhs == rhs
                     }
 
-                    Fox.Assert(property)
+                    expect(property).to(hold())
                 }
 
                 // pure f <*> pure x = pure (f x)
@@ -59,7 +61,7 @@ class ArraySpec: QuickSpec {
                         return rhs == lhs
                     }
 
-                    Fox.Assert(property)
+                    expect(property).to(hold())
                 }
 
                 // u <*> pure y = pure ($ y) <*> u
@@ -71,7 +73,7 @@ class ArraySpec: QuickSpec {
                         return lhs == rhs
                     }
 
-                    Fox.Assert(property)
+                    expect(property).to(hold())
                 }
 
                 // u <*> (v <*> w) = pure (.) <*> u <*> v <*> w
@@ -83,7 +85,7 @@ class ArraySpec: QuickSpec {
                         return lhs == rhs
                     }
 
-                    Fox.Assert(property)
+                    expect(property).to(hold())
                 }
             }
 
@@ -97,7 +99,7 @@ class ArraySpec: QuickSpec {
                         return lhs == rhs
                     }
 
-                    Fox.Assert(property)
+                    expect(property).to(hold())
                 }
 
                 // m >>= return = m
@@ -109,7 +111,7 @@ class ArraySpec: QuickSpec {
                         return lhs == rhs
                     }
 
-                    Fox.Assert(property)
+                    expect(property).to(hold())
                 }
 
                 // (m >>= f) >>= g = m >>= (\x -> f x >>= g)
@@ -121,7 +123,7 @@ class ArraySpec: QuickSpec {
                         return lhs == rhs
                     }
 
-                    Fox.Assert(property)
+                    expect(property).to(hold())
                 }
             }
         }
