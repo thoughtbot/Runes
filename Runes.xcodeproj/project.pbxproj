@@ -14,12 +14,8 @@
 		F802D4F11A5F23BE005E236C /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802D4F01A5F23BE005E236C /* Optional.swift */; };
 		F8624C2C1A645A9600C883B3 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F802D4D21A5F218E005E236C /* Runes.framework */; };
 		F8624C381A645B0700C883B3 /* OptionalSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8624C371A645B0700C883B3 /* OptionalSpec.swift */; };
-		F8624C3D1A645B2C00C883B3 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8624C3B1A645B2C00C883B3 /* Quick.framework */; };
-		F8624C401A645C1A00C883B3 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8624C3B1A645B2C00C883B3 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F8624C4B1A645C9500C883B3 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F86B2E0B1A5F2B8D00C3B8BD /* Runes.framework */; };
 		F8624C511A645CB900C883B3 /* OptionalSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8624C371A645B0700C883B3 /* OptionalSpec.swift */; };
-		F8624C571A645D0300C883B3 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8624C551A645D0300C883B3 /* Quick.framework */; };
-		F8624C5A1A645D1400C883B3 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8624C551A645D0300C883B3 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F8624C5D1A647E6F00C883B3 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8624C5C1A647E6F00C883B3 /* Functions.swift */; };
 		F8624C5E1A647E7300C883B3 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8624C5C1A647E6F00C883B3 /* Functions.swift */; };
 		F8624C601A647EE400C883B3 /* ArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8624C5F1A647EE400C883B3 /* ArraySpec.swift */; };
@@ -27,18 +23,34 @@
 		F86B2E241A5F2B9E00C3B8BD /* Runes.h in Headers */ = {isa = PBXBuildFile; fileRef = F802D4D71A5F218E005E236C /* Runes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F86B2E251A5F2BA400C3B8BD /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802D4EE1A5F2341005E236C /* Operators.swift */; };
 		F86B2E261A5F2BA400C3B8BD /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802D4F01A5F23BE005E236C /* Optional.swift */; };
-		F8AAD42E1A656EF800271271 /* Fox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AAD42D1A656EF800271271 /* Fox.framework */; };
-		F8AAD4301A656F0000271271 /* Fox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AAD42F1A656F0000271271 /* Fox.framework */; };
-		F8AAD4311A656F1A00271271 /* Fox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8AAD42F1A656F0000271271 /* Fox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F8AAD4321A656F1D00271271 /* Fox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8AAD42D1A656EF800271271 /* Fox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F8E59DA61A71824C00F67771 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8E59DA21A71821F00F67771 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F8E59DA71A71824C00F67771 /* NimbleFox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8E59DA31A71821F00F67771 /* NimbleFox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F8E59DA81A71825300F67771 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8E59DA01A71821000F67771 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F8E59DA91A71825300F67771 /* NimbleFox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8E59DA11A71821000F67771 /* NimbleFox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F8E59DAA1A71825600F67771 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E59DA01A71821000F67771 /* Nimble.framework */; };
-		F8E59DAB1A71825600F67771 /* NimbleFox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E59DA11A71821000F67771 /* NimbleFox.framework */; };
-		F8E59DAC1A71825C00F67771 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E59DA21A71821F00F67771 /* Nimble.framework */; };
-		F8E59DAD1A71825C00F67771 /* NimbleFox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E59DA31A71821F00F67771 /* NimbleFox.framework */; };
+		F8E59DBB1A7185D800F67771 /* Fox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E59DB01A7185C800F67771 /* Fox.framework */; };
+		F8E59DBC1A7185D800F67771 /* LlamaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E59DB11A7185C800F67771 /* LlamaKit.framework */; };
+		F8E59DBD1A7185D800F67771 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E59DB21A7185C800F67771 /* Nimble.framework */; };
+		F8E59DBE1A7185D800F67771 /* NimbleFox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E59DB31A7185C800F67771 /* NimbleFox.framework */; };
+		F8E59DBF1A7185D800F67771 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E59DB41A7185C800F67771 /* Quick.framework */; };
+		F8E59DC01A7185DB00F67771 /* Fox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8E59DB01A7185C800F67771 /* Fox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F8E59DC11A7185DB00F67771 /* LlamaKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8E59DB11A7185C800F67771 /* LlamaKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F8E59DC21A7185DB00F67771 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8E59DB21A7185C800F67771 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F8E59DC31A7185DB00F67771 /* NimbleFox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8E59DB31A7185C800F67771 /* NimbleFox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F8E59DC41A7185DB00F67771 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8E59DB41A7185C800F67771 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F8E59DC51A7185E100F67771 /* Fox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E59DB61A7185C800F67771 /* Fox.framework */; };
+		F8E59DC61A7185E100F67771 /* LlamaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E59DB71A7185C800F67771 /* LlamaKit.framework */; };
+		F8E59DC71A7185E100F67771 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E59DB81A7185C800F67771 /* Nimble.framework */; };
+		F8E59DC81A7185E100F67771 /* NimbleFox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E59DB91A7185C800F67771 /* NimbleFox.framework */; };
+		F8E59DC91A7185E100F67771 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E59DBA1A7185C800F67771 /* Quick.framework */; };
+		F8E59DCA1A7185E200F67771 /* Fox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8E59DB61A7185C800F67771 /* Fox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F8E59DCB1A7185E200F67771 /* LlamaKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8E59DB71A7185C800F67771 /* LlamaKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F8E59DCC1A7185E200F67771 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8E59DB81A7185C800F67771 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F8E59DCD1A7185E200F67771 /* NimbleFox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8E59DB91A7185C800F67771 /* NimbleFox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F8E59DCE1A7185E200F67771 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8E59DBA1A7185C800F67771 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F8E59DCF1A71860000F67771 /* LlamaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E59DB11A7185C800F67771 /* LlamaKit.framework */; };
+		F8E59DD01A71860400F67771 /* LlamaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E59DB71A7185C800F67771 /* LlamaKit.framework */; };
+		F8E59DD21A71861000F67771 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E59DD11A71861000F67771 /* Result.swift */; };
+		F8E59DD31A71877B00F67771 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E59DD11A71861000F67771 /* Result.swift */; };
+		F8E59DD51A71896300F67771 /* ResultSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E59DD41A71896300F67771 /* ResultSpec.swift */; };
+		F8E59DD61A71896300F67771 /* ResultSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E59DD41A71896300F67771 /* ResultSpec.swift */; };
+		F8E59DDA1A718BDE00F67771 /* ResultEquatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E59DD71A718A8200F67771 /* ResultEquatable.swift */; };
+		F8E59DDB1A718BDF00F67771 /* ResultEquatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E59DD71A718A8200F67771 /* ResultEquatable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,10 +77,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F8624C401A645C1A00C883B3 /* Quick.framework in CopyFiles */,
-				F8AAD4321A656F1D00271271 /* Fox.framework in CopyFiles */,
-				F8E59DA61A71824C00F67771 /* Nimble.framework in CopyFiles */,
-				F8E59DA71A71824C00F67771 /* NimbleFox.framework in CopyFiles */,
+				F8E59DC01A7185DB00F67771 /* Fox.framework in CopyFiles */,
+				F8E59DC11A7185DB00F67771 /* LlamaKit.framework in CopyFiles */,
+				F8E59DC21A7185DB00F67771 /* Nimble.framework in CopyFiles */,
+				F8E59DC31A7185DB00F67771 /* NimbleFox.framework in CopyFiles */,
+				F8E59DC41A7185DB00F67771 /* Quick.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,10 +91,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F8624C5A1A645D1400C883B3 /* Quick.framework in CopyFiles */,
-				F8AAD4311A656F1A00271271 /* Fox.framework in CopyFiles */,
-				F8E59DA81A71825300F67771 /* Nimble.framework in CopyFiles */,
-				F8E59DA91A71825300F67771 /* NimbleFox.framework in CopyFiles */,
+				F8E59DCA1A7185E200F67771 /* Fox.framework in CopyFiles */,
+				F8E59DCB1A7185E200F67771 /* LlamaKit.framework in CopyFiles */,
+				F8E59DCC1A7185E200F67771 /* Nimble.framework in CopyFiles */,
+				F8E59DCD1A7185E200F67771 /* NimbleFox.framework in CopyFiles */,
+				F8E59DCE1A7185E200F67771 /* Quick.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,18 +111,23 @@
 		F8624C261A645A9600C883B3 /* Runes-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Runes-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8624C341A645AB900C883B3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8624C371A645B0700C883B3 /* OptionalSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalSpec.swift; sourceTree = "<group>"; };
-		F8624C3B1A645B2C00C883B3 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = SOURCE_ROOT; };
 		F8624C451A645C9500C883B3 /* Runes-Mac Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Runes-Mac Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8624C551A645D0300C883B3 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = SOURCE_ROOT; };
 		F8624C5C1A647E6F00C883B3 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		F8624C5F1A647EE400C883B3 /* ArraySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArraySpec.swift; sourceTree = "<group>"; };
 		F86B2E0B1A5F2B8D00C3B8BD /* Runes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Runes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8AAD42D1A656EF800271271 /* Fox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fox.framework; path = Carthage/Build/iOS/Fox.framework; sourceTree = SOURCE_ROOT; };
-		F8AAD42F1A656F0000271271 /* Fox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fox.framework; path = Carthage/Build/Mac/Fox.framework; sourceTree = SOURCE_ROOT; };
-		F8E59DA01A71821000F67771 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = SOURCE_ROOT; };
-		F8E59DA11A71821000F67771 /* NimbleFox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NimbleFox.framework; path = Carthage/Build/Mac/NimbleFox.framework; sourceTree = SOURCE_ROOT; };
-		F8E59DA21A71821F00F67771 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
-		F8E59DA31A71821F00F67771 /* NimbleFox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NimbleFox.framework; path = Carthage/Build/iOS/NimbleFox.framework; sourceTree = SOURCE_ROOT; };
+		F8E59DB01A7185C800F67771 /* Fox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fox.framework; sourceTree = "<group>"; };
+		F8E59DB11A7185C800F67771 /* LlamaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LlamaKit.framework; sourceTree = "<group>"; };
+		F8E59DB21A7185C800F67771 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = "<group>"; };
+		F8E59DB31A7185C800F67771 /* NimbleFox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NimbleFox.framework; sourceTree = "<group>"; };
+		F8E59DB41A7185C800F67771 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = "<group>"; };
+		F8E59DB61A7185C800F67771 /* Fox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fox.framework; sourceTree = "<group>"; };
+		F8E59DB71A7185C800F67771 /* LlamaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LlamaKit.framework; sourceTree = "<group>"; };
+		F8E59DB81A7185C800F67771 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = "<group>"; };
+		F8E59DB91A7185C800F67771 /* NimbleFox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NimbleFox.framework; sourceTree = "<group>"; };
+		F8E59DBA1A7185C800F67771 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = "<group>"; };
+		F8E59DD11A71861000F67771 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		F8E59DD41A71896300F67771 /* ResultSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultSpec.swift; sourceTree = "<group>"; };
+		F8E59DD71A718A8200F67771 /* ResultEquatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultEquatable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8E59DCF1A71860000F67771 /* LlamaKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,10 +144,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8624C2C1A645A9600C883B3 /* Runes.framework in Frameworks */,
-				F8AAD42E1A656EF800271271 /* Fox.framework in Frameworks */,
-				F8624C3D1A645B2C00C883B3 /* Quick.framework in Frameworks */,
-				F8E59DAC1A71825C00F67771 /* Nimble.framework in Frameworks */,
-				F8E59DAD1A71825C00F67771 /* NimbleFox.framework in Frameworks */,
+				F8E59DBB1A7185D800F67771 /* Fox.framework in Frameworks */,
+				F8E59DBC1A7185D800F67771 /* LlamaKit.framework in Frameworks */,
+				F8E59DBD1A7185D800F67771 /* Nimble.framework in Frameworks */,
+				F8E59DBE1A7185D800F67771 /* NimbleFox.framework in Frameworks */,
+				F8E59DBF1A7185D800F67771 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,10 +157,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8624C4B1A645C9500C883B3 /* Runes.framework in Frameworks */,
-				F8AAD4301A656F0000271271 /* Fox.framework in Frameworks */,
-				F8624C571A645D0300C883B3 /* Quick.framework in Frameworks */,
-				F8E59DAA1A71825600F67771 /* Nimble.framework in Frameworks */,
-				F8E59DAB1A71825600F67771 /* NimbleFox.framework in Frameworks */,
+				F8E59DC51A7185E100F67771 /* Fox.framework in Frameworks */,
+				F8E59DC61A7185E100F67771 /* LlamaKit.framework in Frameworks */,
+				F8E59DC71A7185E100F67771 /* Nimble.framework in Frameworks */,
+				F8E59DC81A7185E100F67771 /* NimbleFox.framework in Frameworks */,
+				F8E59DC91A7185E100F67771 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8E59DD01A71860400F67771 /* LlamaKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +181,7 @@
 			children = (
 				F802D4D41A5F218E005E236C /* Source */,
 				F8624C321A645AB900C883B3 /* Tests */,
+				F8E59DAE1A7185A700F67771 /* Frameworks */,
 				F802D4D31A5F218E005E236C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -176,9 +200,10 @@
 		F802D4D41A5F218E005E236C /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				4A8C7DE71A5F58330050914C /* Array.swift */,
 				F802D4EE1A5F2341005E236C /* Operators.swift */,
+				4A8C7DE71A5F58330050914C /* Array.swift */,
 				F802D4F01A5F23BE005E236C /* Optional.swift */,
+				F8E59DD11A71861000F67771 /* Result.swift */,
 				F802D4D51A5F218E005E236C /* Supporting Files */,
 			);
 			path = Source;
@@ -199,7 +224,6 @@
 				F8624C5B1A647E5500C883B3 /* Helpers */,
 				F8624C361A645AE300C883B3 /* Tests */,
 				F8624C331A645AB900C883B3 /* Resources */,
-				F8624C391A645B1300C883B3 /* Frameworks */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -217,47 +241,53 @@
 			children = (
 				F8624C371A645B0700C883B3 /* OptionalSpec.swift */,
 				F8624C5F1A647EE400C883B3 /* ArraySpec.swift */,
+				F8E59DD41A71896300F67771 /* ResultSpec.swift */,
 			);
 			path = Tests;
-			sourceTree = "<group>";
-		};
-		F8624C391A645B1300C883B3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F8624C531A645CF400C883B3 /* OS X */,
-				F8624C521A645CE200C883B3 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F8624C521A645CE200C883B3 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				F8E59DA21A71821F00F67771 /* Nimble.framework */,
-				F8E59DA31A71821F00F67771 /* NimbleFox.framework */,
-				F8AAD42D1A656EF800271271 /* Fox.framework */,
-				F8624C3B1A645B2C00C883B3 /* Quick.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		F8624C531A645CF400C883B3 /* OS X */ = {
-			isa = PBXGroup;
-			children = (
-				F8E59DA01A71821000F67771 /* Nimble.framework */,
-				F8E59DA11A71821000F67771 /* NimbleFox.framework */,
-				F8AAD42F1A656F0000271271 /* Fox.framework */,
-				F8624C551A645D0300C883B3 /* Quick.framework */,
-			);
-			name = "OS X";
 			sourceTree = "<group>";
 		};
 		F8624C5B1A647E5500C883B3 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				F8624C5C1A647E6F00C883B3 /* Functions.swift */,
+				F8E59DD71A718A8200F67771 /* ResultEquatable.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F8E59DAE1A7185A700F67771 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8E59DAF1A7185C800F67771 /* iOS */,
+				F8E59DB51A7185C800F67771 /* Mac */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8E59DAF1A7185C800F67771 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				F8E59DB01A7185C800F67771 /* Fox.framework */,
+				F8E59DB11A7185C800F67771 /* LlamaKit.framework */,
+				F8E59DB21A7185C800F67771 /* Nimble.framework */,
+				F8E59DB31A7185C800F67771 /* NimbleFox.framework */,
+				F8E59DB41A7185C800F67771 /* Quick.framework */,
+			);
+			name = iOS;
+			path = Carthage/Build/iOS;
+			sourceTree = "<group>";
+		};
+		F8E59DB51A7185C800F67771 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				F8E59DB61A7185C800F67771 /* Fox.framework */,
+				F8E59DB71A7185C800F67771 /* LlamaKit.framework */,
+				F8E59DB81A7185C800F67771 /* Nimble.framework */,
+				F8E59DB91A7185C800F67771 /* NimbleFox.framework */,
+				F8E59DBA1A7185C800F67771 /* Quick.framework */,
+			);
+			name = Mac;
+			path = Carthage/Build/Mac;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,6 +467,7 @@
 			files = (
 				F802D4EF1A5F2341005E236C /* Operators.swift in Sources */,
 				F802D4F11A5F23BE005E236C /* Optional.swift in Sources */,
+				F8E59DD21A71861000F67771 /* Result.swift in Sources */,
 				4A8C7DE81A5F58330050914C /* Array.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,7 +476,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8E59DDA1A718BDE00F67771 /* ResultEquatable.swift in Sources */,
 				F8624C381A645B0700C883B3 /* OptionalSpec.swift in Sources */,
+				F8E59DD51A71896300F67771 /* ResultSpec.swift in Sources */,
 				F8624C5E1A647E7300C883B3 /* Functions.swift in Sources */,
 				F8624C601A647EE400C883B3 /* ArraySpec.swift in Sources */,
 			);
@@ -455,7 +488,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8E59DDB1A718BDF00F67771 /* ResultEquatable.swift in Sources */,
 				F8624C511A645CB900C883B3 /* OptionalSpec.swift in Sources */,
+				F8E59DD61A71896300F67771 /* ResultSpec.swift in Sources */,
 				F8624C5D1A647E6F00C883B3 /* Functions.swift in Sources */,
 				F8624C611A647FB300C883B3 /* ArraySpec.swift in Sources */,
 			);
@@ -467,6 +502,7 @@
 			files = (
 				F86B2E251A5F2BA400C3B8BD /* Operators.swift in Sources */,
 				F86B2E261A5F2BA400C3B8BD /* Optional.swift in Sources */,
+				F8E59DD31A71877B00F67771 /* Result.swift in Sources */,
 				4A8C7DE91A5F58330050914C /* Array.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -580,6 +616,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -597,6 +637,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -689,6 +733,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -713,6 +761,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
