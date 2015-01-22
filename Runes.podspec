@@ -6,7 +6,6 @@ Pod::Spec.new do |spec|
   spec.license = { :type => 'MIT', :file => 'LICENSE' }
   spec.author = {
     'Gordon Fontenot' => 'gordon@thoughtbot.com',
-    'Adam Sharp' => 'adsharp@me.com',
     'thoughtbot' => nil,
   }
   spec.social_media_url = 'http://twitter.com/thoughtbot'
