@@ -4,6 +4,12 @@ Indecipherable symbols that some people claim have actual meaning.
 
 ## Installation ##
 
+Note that as of Runes 1.2, [pre-built binaries][releases] will assume Swift
+1.2. Runes 1.1.1 is considered stable for long-term use, and `master` is 100%
+source compatible with Swift 1.1.
+
+[releases]: https://github.com/thoughtbot/Runes/releases
+
 ### [Carthage](https://github.com/Carthage/Carthage) ##
 
 `github "thoughtbot/runes"`
