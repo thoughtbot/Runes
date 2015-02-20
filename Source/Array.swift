@@ -27,7 +27,7 @@ public func <*><T, U>(fs: [T -> U], a: [T]) -> [U] {
 }
 
 /**
-    flatMap a function over an array of values
+    flatMap a function over an array of values (left associative)
 
     apply a function to each value of an array and flatten the resulting array
 
@@ -43,6 +43,25 @@ public func >>-<T, U>(a: [T], f: T -> [U]) -> [U] {
 @availability(*, unavailable, message="function (T -> U) does not return [U], perhaps you meant f <^> val")
 public func >>-<T, U>(a: [T], f: T -> U) -> [U] {
     return a.map(f)
+}
+
+/**
+flatMap a function over an array of values (right associative)
+
+apply a function to each value of an array and flatten the resulting array
+
+:param: f A transformation function from type T to an array of type [U]
+:param: a An array of type [T]
+
+:returns: An array of type [U]
+*/
+public func -<<<T, U>(f: T -> [U], a: [T]) -> [U] {
+  return a.flatMap(f)
+}
+
+@availability(*, unavailable, message="function (T -> U) does not return [U], perhaps you meant f <^> val")
+public func -<<<T, U>(f: T -> U, a: [T]) -> [U] {
+  return a.map(f)
 }
 
 /**

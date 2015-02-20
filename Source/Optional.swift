@@ -29,7 +29,7 @@ public func <*><T, U>(f: (T -> U)?, a: T?) -> U? {
 }
 
 /**
-    flatMap a function over an optional value
+    flatMap a function over an optional value (left associative)
 
     - If the value is .None, the function will not be evaluated and this will return .None
     - If the value is .Some, the function will be applied to the unwrapped value
@@ -45,6 +45,26 @@ public func >>-<T, U>(a: T?, f: T -> U?) -> U? {
 
 @availability(*, unavailable, message="function (T -> U) does not return U?, perhaps you meant f <^> val")
 public func >>-<T, U>(a: T?, f: T -> U) -> U? {
+  return a.map(f)
+}
+
+/**
+flatMap a function over an optional value (right associative)
+
+- If the value is .None, the function will not be evaluated and this will return .None
+- If the value is .Some, the function will be applied to the unwrapped value
+
+:param: a A value of type Optional<T>
+:param: f A transformation function from type T to type Optional<U>
+
+:returns: A value of type Optional<U>
+*/
+public func -<<<T, U>(f: T -> U?, a: T?) -> U? {
+  return a.flatMap(f)
+}
+
+@availability(*, unavailable, message="function (T -> U) does not return U?, perhaps you meant f <^> val")
+public func -<<<T, U>(f: T -> U, a: T?) -> U? {
     return a.map(f)
 }
 
