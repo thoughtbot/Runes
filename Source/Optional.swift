@@ -43,11 +43,6 @@ public func >>-<T, U>(a: T?, f: T -> U?) -> U? {
     return a.flatMap(f)
 }
 
-@availability(*, unavailable, message="function (T -> U) does not return U?, perhaps you meant f <^> val")
-public func >>-<T, U>(a: T?, f: T -> U) -> U? {
-  return a.map(f)
-}
-
 /**
 flatMap a function over an optional value (right associative)
 
@@ -61,11 +56,6 @@ flatMap a function over an optional value (right associative)
 */
 public func -<<<T, U>(f: T -> U?, a: T?) -> U? {
   return a.flatMap(f)
-}
-
-@availability(*, unavailable, message="function (T -> U) does not return U?, perhaps you meant f <^> val")
-public func -<<<T, U>(f: T -> U, a: T?) -> U? {
-    return a.map(f)
 }
 
 /**

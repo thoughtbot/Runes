@@ -40,11 +40,6 @@ public func >>-<T, U>(a: [T], f: T -> [U]) -> [U] {
     return a.flatMap(f)
 }
 
-@availability(*, unavailable, message="function (T -> U) does not return [U], perhaps you meant f <^> val")
-public func >>-<T, U>(a: [T], f: T -> U) -> [U] {
-    return a.map(f)
-}
-
 /**
 flatMap a function over an array of values (right associative)
 
@@ -57,11 +52,6 @@ apply a function to each value of an array and flatten the resulting array
 */
 public func -<<<T, U>(f: T -> [U], a: [T]) -> [U] {
   return a.flatMap(f)
-}
-
-@availability(*, unavailable, message="function (T -> U) does not return [U], perhaps you meant f <^> val")
-public func -<<<T, U>(f: T -> U, a: [T]) -> [U] {
-  return a.map(f)
 }
 
 /**
