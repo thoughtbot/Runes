@@ -22,6 +22,6 @@ func prepend(x: String) -> String {
 
 func generateString(block:String -> Bool) -> FOXGenerator {
     return forAll(string()) { string in
-        return block(string as String)
+        return block(string as! String)
     }
 }

@@ -6,7 +6,7 @@ import Runes
 
 private func generateArray(block:[String] -> Bool) -> FOXGenerator {
     return forAll(array(string())) { array in
-        return block(array as [String])
+        return block(array as! [String])
     }
 }
 

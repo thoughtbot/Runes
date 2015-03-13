@@ -6,7 +6,7 @@ import Runes
 
 private func generateOptional(block: String? -> Bool) -> FOXGenerator {
     return forAll(FOXOptional(string())) { optional in
-        return block(optional as String?)
+        return block(optional as! String?)
     }
 }
 
