@@ -10,20 +10,35 @@ source compatible with Swift 1.1.
 
 [releases]: https://github.com/thoughtbot/Runes/releases
 
-### [Carthage](https://github.com/Carthage/Carthage) ##
+### [Carthage] ###
 
-`github "thoughtbot/runes"`
+[Carthage]: https://github.com/Carthage/Carthage
 
-### [CocoaPods](http://cocoapods.org/) ###
+```
+github "thoughtbot/runes"
+```
 
-__DISCLAIMER: CocoaPods doesn't officially support Swift projects yet. Use the
-pre-release version at your own discretion.__
+Then run `carthage update`.
 
-Add the following to your
-[Podfile](http://guides.cocoapods.org/using/the-podfile.html):
+Follow the current instructions in [Carthage's README][carthage-installation]
+for up to date installation instructions.
+
+[carthage-installation]: https://github.com/Carthage/Carthage#adding-frameworks-to-an-application
+
+### [CocoaPods] ###
+
+[CocoaPods]: http://cocoapods.org
+
+Add the following to your [Podfile](http://guides.cocoapods.org/using/the-podfile.html):
 
 ```ruby
-pod 'Runes', :git => 'https://github.com/thoughtbot/runes'
+pod 'Runes'
+```
+
+You will also need to make sure you're opting into using frameworks:
+
+```ruby
+use_frameworks!
 ```
 
 Then run `pod install` with CocoaPods 0.36 or newer.
