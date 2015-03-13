@@ -78,17 +78,4 @@ extension Array {
     func apply<U>(fs: [T -> U]) -> [U] {
         return fs.flatMap { f in self.map(f) }
     }
-
-    /**
-        flatMap a function over self
-
-        map a function over each value inside self and flatten the result
-
-        :param: f A transformation function from type T to type [U]
-
-        :returns: A value of type [U]
-    */
-    func flatMap<U>(f: T -> [U]) -> [U] {
-        return reduce([]) { bs, a in bs + f(a) }
-    }
 }

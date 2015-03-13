@@ -86,21 +86,4 @@ extension Optional {
         default: return .None
         }
     }
-
-    /**
-        flatMap a function over self
-
-        - If self is .None, the function will not be evaluated and this will return .None
-        - If self is .Some, the function will be applied to the unwrapped value
-
-        :param: f A transformation function from type T to type Optional<U>
-
-        :returns: A value of type Optional<U>
-    */
-    func flatMap<U>(f: T -> U?) -> U? {
-        switch self {
-        case let .Some(x): return f(x)
-        default: return .None
-        }
-    }
 }
