@@ -81,9 +81,6 @@ extension Optional {
         :returns: A value of type Optional<U>
     */
     func apply<U>(f: (T -> U)?) -> U? {
-        switch (self, f) {
-        case let (.Some(x), .Some(fx)): return fx(x)
-        default: return .None
-        }
+        return f.flatMap { self.map($0) }
     }
 }
