@@ -70,3 +70,43 @@ public func >>-<T, U>(a: [T], f: T -> [U]) -> [U]
 public func -<<<T, U>(f: T -> [U], a: [T]) -> [U]
 public func pure<T>(a: T) -> [T]
 ```
+
+Contributing
+------------
+
+See the [CONTRIBUTING] document. Thank you, [contributors]!
+
+[CONTRIBUTING]: CONTRIBUTING.md
+[contributors]: https://github.com/thoughtbot/Runes/graphs/contributors
+
+Need Help?
+----------
+
+We offer 1-on-1 coaching. We can help you with functional programming in Swift,
+get started writing unit tests, and convert from Objective-C to Swift.
+[Get in touch].
+
+[Get in touch]: http://coaching.thoughtbot.com/ios/?utm_source=github
+
+License
+-------
+
+Runes is Copyright (c) 2015 thoughtbot, inc. It is free software, and may be
+redistributed under the terms specified in the [LICENSE] file.
+
+[LICENSE]: /LICENSE
+
+About
+-----
+
+![thoughtbot](https://thoughtbot.com/logo.png)
+
+Runes is maintained and funded by thoughtbot, inc. The names and logos for
+thoughtbot are trademarks of thoughtbot, inc.
+
+We love open source software! See [our other projects][community] or look at
+our product [case studies] and [hire us][hire] to help build your iOS app.
+
+[community]: https://thoughtbot.com/community?utm_source=github
+[case studies]: https://thoughtbot.com/ios?utm_source=github
+[hire]: https://thoughtbot.com/hire-us?utm_source=github
