@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/thoughtbot/Runes/gh-pages/Logo.png" width="200" />
 
-Indecipherable symbols that some people claim have actual meaning.
+Infix operators for monadic functions, functors and applicatives.
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
