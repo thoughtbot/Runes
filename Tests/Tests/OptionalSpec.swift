@@ -24,14 +24,6 @@ class OptionalSpec: QuickSpec {
                         }
                     }
 
-                    let duplicate: String? -> String?? = { string in
-                        if let s = string {
-                            return .Some(string)
-                        } else {
-                            return .None
-                        }
-                    }
-
                     let property = generateOptional() { optional in
                         let lhs = testFunc <<- optional
                         let rhs = compose(duplicate, curry(<^>)(testFunc))(optional)

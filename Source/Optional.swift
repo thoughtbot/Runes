@@ -4,6 +4,14 @@ public func <<-<T,U>(f: T? -> U, a: T?) -> U? {
     case .None: return .None
     }
 }
+
+public func duplicate<T>(a: T?) -> T?? {
+    switch a {
+    case .None: return .None
+    default: return .Some(a)
+    }
+}
+
 /**
     map a function over an optional value
 
