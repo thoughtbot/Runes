@@ -13,6 +13,36 @@ private func generateOptional(block: String? -> Bool) -> FOXGenerator {
 class OptionalSpec: QuickSpec {
     override func spec() {
         describe("Optional") {
+            describe("extend") {
+                // extend f = fmap f . duplicate
+                it("obeys the comonadic extend law") {
+                    let testFunc: String? -> String = { string in
+                        if let s = string {
+                            return "YES"
+                        } else {
+                            return "NO"
+                        }
+                    }
+
+                    let duplicate: String? -> String?? = { string in
+                        if let s = string {
+                            return .Some(string)
+                        } else {
+                            return .None
+                        }
+                    }
+
+                    let property = generateOptional() { optional in
+                        let lhs = testFunc <<- optional
+                        let rhs = compose(duplicate, curry(<^>)(testFunc))(optional)
+                        
+                        return lhs == rhs
+                    }
+
+                    expect(property).to(hold())
+                }
+            }
+
             describe("map") {
                 // fmap id = id
                 it("obeys the identity law") {

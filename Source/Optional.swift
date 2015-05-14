@@ -1,3 +1,9 @@
+public func <<-<T,U>(f: T? -> U, a: T?) -> U? {
+    switch a {
+    case .Some(_): return .Some(f(a))
+    case .None: return .None
+    }
+}
 /**
     map a function over an optional value
 
