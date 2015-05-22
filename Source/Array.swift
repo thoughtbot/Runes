@@ -8,7 +8,7 @@
 
     - returns: A value of type `[U]`
 */
-public func <^><T, U>(f: T -> U, a: [T]) -> [U] {
+public func <^> <T, U>(f: T -> U, a: [T]) -> [U] {
     return a.map(f)
 }
 
@@ -22,7 +22,7 @@ public func <^><T, U>(f: T -> U, a: [T]) -> [U] {
 
     - returns: A value of type `[U]`
 */
-public func <*><T, U>(fs: [T -> U], a: [T]) -> [U] {
+public func <*> <T, U>(fs: [T -> U], a: [T]) -> [U] {
     return a.apply(fs)
 }
 
@@ -36,7 +36,7 @@ public func <*><T, U>(fs: [T -> U], a: [T]) -> [U] {
 
     - returns: A value of type `[U]`
 */
-public func >>-<T, U>(a: [T], @noescape f: T -> [U]) -> [U] {
+public func >>- <T, U>(a: [T], @noescape f: T -> [U]) -> [U] {
     return a.flatMap(f)
 }
 
@@ -50,7 +50,7 @@ public func >>-<T, U>(a: [T], @noescape f: T -> [U]) -> [U] {
 
     - returns: A value of type `[U]`
 */
-public func -<<<T, U>(@noescape f: T -> [U], a: [T]) -> [U] {
+public func -<< <T, U>(@noescape f: T -> [U], a: [T]) -> [U] {
   return a.flatMap(f)
 }
 
