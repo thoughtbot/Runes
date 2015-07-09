@@ -75,7 +75,7 @@ extension Array {
 
         - returns: A value of type [U]
     */
-    func apply<U>(fs: [T -> U]) -> [U] {
+    func apply<U>(fs: [Element -> U]) -> [U] {
         return fs.flatMap { self.map($0) }
     }
 }
