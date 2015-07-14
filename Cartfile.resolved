@@ -1,4 +1,4 @@
 github "jeffh/Fox" "78cc9dc1d446a1005cfb8a39a3e7c859f0608227"
 github "gfontenot/Nimble" "dbc5bb3e2bd7e7ce322b128d674983937bbffd57"
 github "Quick/Quick" "v0.5.0"
-github "thoughtbot/NimbleFox" "aa6d12ceeb4817f4fe3bb9bd6fd4eae4214173d3"
+github "thoughtbot/NimbleFox" "v2.0.0"
