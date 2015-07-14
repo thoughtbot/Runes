@@ -71,7 +71,7 @@ public extension Array {
 
         This will return a new array resulting from the matrix of each function being applied to each value inside self
 
-        - parameter fs: An array of transformation functions from type T to type U
+        - parameter fs: An array of transformation functions from type Element to type U
 
         - returns: A value of type [U]
     */
