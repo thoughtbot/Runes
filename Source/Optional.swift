@@ -69,7 +69,7 @@ public func pure<T>(a: T) -> T? {
     return .Some(a)
 }
 
-extension Optional {
+public extension Optional {
     /**
         apply an optional function to self
 

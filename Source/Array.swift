@@ -65,7 +65,7 @@ public func pure<T>(a: T) -> [T] {
     return [a]
 }
 
-extension Array {
+public extension Array {
     /**
         apply an array of functions to self
 
