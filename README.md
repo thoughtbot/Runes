@@ -6,8 +6,8 @@ Indecipherable symbols that some people claim have actual meaning.
 
 ## Installation ##
 
-Note that as of Runes 1.2, `master` will assume Swift 1.2. The Runes 1.1.x
-series of releases are considered stable for long-term use.
+The source on `master` assumes Swift 2.0, and will be released as Runes 3.0.
+If you need Swift 1.2 support, please use the 2.X series of releases.
 
 ### [Carthage] ###
 
