@@ -76,11 +76,11 @@ public extension Optional {
         - If either self or the function are `.None`, the function will not be evaluated and this will return `.None`
         - If both self and the function are `.Some`, the function will be applied to the unwrapped value
 
-        - parameter f: An optional transformation function from type `T` to type `U`
+        - parameter f: An optional transformation function from type `Wrapped` to type `U`
 
         - returns: A value of type `Optional<U>`
     */
-    func apply<U>(f: (T -> U)?) -> U? {
+    func apply<U>(f: (Wrapped -> U)?) -> U? {
         return f.flatMap { self.map($0) }
     }
 }
