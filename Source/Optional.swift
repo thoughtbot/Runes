@@ -80,7 +80,7 @@ public extension Optional {
 
         - returns: A value of type `Optional<U>`
     */
-    func apply<U>(f: (T -> U)?) -> U? {
+    func apply<U>(f: (Wrapped -> U)?) -> U? {
         return f.flatMap { self.map($0) }
     }
 }
