@@ -111,8 +111,8 @@ Importing Runes introduces 3 new operators and one global function:
 
 - `<^>` (pronounced "map")
 - `<*>` (pronounced "apply")
-- `>>-` (pronounced "flatMap") (left associative)
-- `-<<` (pronounced "flatMap") (right associative)
+- `>>-` (pronounced "flatMap" or "bind") (left associative)
+- `-<<` (pronounced "flatMap" or "bind") (right associative)
 - `pure` (pronounced "pure")
 
 We also include default implementations for Optional and Array with the
