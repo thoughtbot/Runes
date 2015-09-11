@@ -1,131 +1,85 @@
-import Fox
-import Nimble
-import NimbleFox
-import Quick
+import func SwiftCheck.property
+import func SwiftCheck.forAll
+import func SwiftCheck.<-
+import XCTest
 import Runes
 
-private func generateOptional(block: String? -> Bool) -> FOXGenerator {
-    return forAll(FOXOptional(string())) { optional in
-        return block(optional as! String?)
+class OptionalSpec: XCTestCase {
+    func testFunctor() {
+        // fmap id = id
+        property("identity law") <- forAll { (optional: String?) in
+            let lhs = id <^> optional
+            let rhs = optional
+
+            return lhs == rhs
+        }
+
+        // fmap (g . h) = (fmap g) . (fmap h)
+        property("function composition law") <- forAll { (optional: String?) in
+            let lhs = compose(append, prepend) <^> optional
+            let rhs = compose(curry(<^>)(append), curry(<^>)(prepend))(optional)
+
+            return lhs == rhs
+        }
     }
-}
 
-class OptionalSpec: QuickSpec {
-    override func spec() {
-        describe("Optional") {
-            describe("map") {
-                // fmap id = id
-                it("obeys the identity law") {
-                    let property = generateOptional() { optional in
-                        let lhs = id <^> optional
-                        let rhs = optional
+    func testApplicative() {
+        // pure id <*> v = v
+        property("identity law") <- forAll { (optional: String?) in
+            let lhs = pure(id) <*> optional
+            let rhs = optional
 
-                        return lhs == rhs
-                    }
+            return lhs == rhs
+        }
 
-                    expect(property).to(hold())
-                }
+        // pure f <*> pure x = pure (f x)
+        property("homomorphism law") <- forAll { (string: String) in
+            let lhs: String? = pure(append) <*> pure(string)
+            let rhs: String? = pure(append(string))
 
-                // fmap (g . h) = (fmap g) . (fmap h)
-                it("obeys the function composition law") {
-                    let property = generateOptional() { optional in
-                        let lhs = compose(append, prepend) <^> optional
-                        let rhs = compose(curry(<^>)(append), curry(<^>)(prepend))(optional)
+            return rhs == lhs
+        }
 
-                        return lhs == rhs
-                    }
+        // u <*> pure y = pure ($ y) <*> u
+        property("interchange law") <- forAll { (string: String) in
+            let lhs: String? = pure(append) <*> pure(string)
+            let rhs: String? = pure({ $0(string) }) <*> pure(append)
 
-                    expect(property).to(hold())
-                }
-            }
+            return lhs == rhs
+        }
 
-            describe("apply") {
-                // pure id <*> v = v
-                it("obeys the identity law") {
-                    let property = generateOptional() { optional in
-                        let lhs = pure(id) <*> optional
-                        let rhs = optional
+        // u <*> (v <*> w) = pure (.) <*> u <*> v <*> w
+        property("compospropertyion law") <- forAll { (optional: String?) in
+            let lhs = pure(append) <*> (pure(prepend) <*> optional)
+            let rhs = pure(curry(compose)) <*> pure(append)  <*> pure(prepend) <*> optional
 
-                        return lhs == rhs
-                    }
+            return lhs == rhs
+        }
+    }
 
-                    expect(property).to(hold())
-                }
+    func testMonad() {
+        // return x >>= f = f x
+        property("left identity law") <- forAll { (string: String) in
+            let lhs: String? = pure(string) >>- compose(append, pure)
+            let rhs: String? = compose(append, pure)(string)
 
-                // pure f <*> pure x = pure (f x)
-                it("obeys the homomorphism law") {
-                    let property = generateString() { string in
-                        let lhs: String? = pure(append) <*> pure(string)
-                        let rhs: String? = pure(append(string))
+            return lhs == rhs
+        }
 
-                        return rhs == lhs
-                    }
+        // m >>= return = m
+        property("right identity law") <- forAll { (optional: String?) in
+            let lhs = optional >>- pure
+            let rhs = optional
 
-                    expect(property).to(hold())
-                }
+            return lhs == rhs
+        }
 
-                // u <*> pure y = pure ($ y) <*> u
-                it("obeys the interchange law") {
-                    let property = generateString() { string in
-                        let lhs: String? = pure(append) <*> pure(string)
-                        let rhs: String? = pure({ $0(string) }) <*> pure(append)
+        // (m >>= f) >>= g = m >>= (\x -> f x >>= g)
+        property("associativity law") <- forAll { (optional: String?) in
+            let lhs = (optional >>- compose(append, pure)) >>- compose(prepend, pure)
+            let rhs = optional >>- { x in compose(append, pure)(x) >>- compose(prepend, pure) }
 
-                        return lhs == rhs
-                    }
-
-                    expect(property).to(hold())
-                }
-
-                // u <*> (v <*> w) = pure (.) <*> u <*> v <*> w
-                it("obeys the composition law") {
-                    let property = generateOptional() { optional in
-                        let lhs = pure(append) <*> (pure(prepend) <*> optional)
-                        let rhs = pure(curry(compose)) <*> pure(append)  <*> pure(prepend) <*> optional
-
-                        return lhs == rhs
-                    }
-
-                    expect(property).to(hold())
-                }
-            }
-
-            describe("flatMap") {
-                // return x >>= f = f x
-                it("obeys the left identity law") {
-                    let property = generateString() { string in
-                        let lhs: String? = pure(string) >>- compose(append, pure)
-                        let rhs: String? = compose(append, pure)(string)
-
-                        return lhs == rhs
-                    }
-
-                    expect(property).to(hold())
-                }
-
-                // m >>= return = m
-                it("obeys the right identity law") {
-                    let property = generateOptional() { optional in
-                        let lhs = optional >>- pure
-                        let rhs = optional
-
-                        return lhs == rhs
-                    }
-
-                    expect(property).to(hold())
-                }
-
-                // (m >>= f) >>= g = m >>= (\x -> f x >>= g)
-                it("obeys the associativity law") {
-                    let property = generateOptional() { optional in
-                        let lhs = (optional >>- compose(append, pure)) >>- compose(prepend, pure)
-                        let rhs = optional >>- { x in compose(append, pure)(x) >>- compose(prepend, pure) }
-
-                        return lhs == rhs
-                    }
-
-                    expect(property).to(hold())
-                }
-            }
+            return lhs == rhs
         }
     }
 }
