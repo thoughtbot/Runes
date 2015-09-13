@@ -1,6 +1,4 @@
-import func SwiftCheck.property
-import func SwiftCheck.forAll
-import func SwiftCheck.<-
+import SwiftCheck
 import XCTest
 import Runes
 
