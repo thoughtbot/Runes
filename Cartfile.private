@@ -1,1 +1,1 @@
-github "typelift/SwiftCheck" "master"
+github "typelift/SwiftCheck" ~> 0.3.1
