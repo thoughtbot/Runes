@@ -5,7 +5,7 @@ import Runes
 class OptionalSpec: XCTestCase {
     func testFunctor() {
         // fmap id = id
-        property("identity law") <- forAll { (x: String?) in
+        property("identity law") <- forAll { (x: Int?) in
             let lhs = id <^> x
             let rhs = x
 
@@ -13,7 +13,7 @@ class OptionalSpec: XCTestCase {
         }
 
         // fmap (f . g) = (fmap f) . (fmap g)
-        property("function composition law") <- forAll { (o: OptionalOf<String>, fa: ArrowOf<String, String>, fb: ArrowOf<String, String>) in
+        property("function composition law") <- forAll { (o: OptionalOf<Int>, fa: ArrowOf<Int, Int>, fb: ArrowOf<Int, Int>) in
             let f = fa.getArrow
             let g = fb.getArrow
             let x = o.getOptional
@@ -27,7 +27,7 @@ class OptionalSpec: XCTestCase {
 
     func testApplicative() {
         // pure id <*> v = v
-        property("identity law") <- forAll { (x: String?) in
+        property("identity law") <- forAll { (x: Int?) in
             let lhs = pure(id) <*> x
             let rhs = x
 
@@ -35,17 +35,17 @@ class OptionalSpec: XCTestCase {
         }
 
         // pure f <*> pure x = pure (f x)
-        property("homomorphism law") <- forAll { (x: String, fa: ArrowOf<String, String>) in
+        property("homomorphism law") <- forAll { (x: Int, fa: ArrowOf<Int, Int>) in
             let f = fa.getArrow
 
-            let lhs: String? = pure(f) <*> pure(x)
-            let rhs: String? = pure(f(x))
+            let lhs: Int? = pure(f) <*> pure(x)
+            let rhs: Int? = pure(f(x))
 
             return rhs == lhs
         }
 
         // f <*> pure x = pure ($ x) <*> f
-        property("interchange law") <- forAll { (x: String, fa: OptionalOf<ArrowOf<String, String>>) in
+        property("interchange law") <- forAll { (x: Int, fa: OptionalOf<ArrowOf<Int, Int>>) in
             let f = fa.getOptional?.getArrow
 
             let lhs = f <*> pure(x)
@@ -55,7 +55,7 @@ class OptionalSpec: XCTestCase {
         }
 
         // f <*> (g <*> x) = pure (.) <*> f <*> g <*> x
-        property("composition law") <- forAll { (o: OptionalOf<String>, fa: OptionalOf<ArrowOf<String, String>>, fb: OptionalOf<ArrowOf<String, String>>) in
+        property("composition law") <- forAll { (o: OptionalOf<Int>, fa: OptionalOf<ArrowOf<Int, Int>>, fb: OptionalOf<ArrowOf<Int, Int>>) in
             let x = o.getOptional
             let f = fa.getOptional?.getArrow
             let g = fb.getOptional?.getArrow
@@ -69,8 +69,8 @@ class OptionalSpec: XCTestCase {
 
     func testMonad() {
         // return x >>= f = f x
-        property("left identity law") <- forAll { (x: String, fa: ArrowOf<String, String>) in
-            let f: String -> String? = compose(fa.getArrow, pure)
+        property("left identity law") <- forAll { (x: Int, fa: ArrowOf<Int, Int>) in
+            let f: Int -> Int? = compose(fa.getArrow, pure)
 
             let lhs = pure(x) >>- f
             let rhs = f(x)
@@ -79,7 +79,7 @@ class OptionalSpec: XCTestCase {
         }
 
         // m >>= return = m
-        property("right identity law") <- forAll { (o: OptionalOf<String>) in
+        property("right identity law") <- forAll { (o: OptionalOf<Int>) in
             let x = o.getOptional
 
             let lhs = x >>- pure
@@ -89,10 +89,10 @@ class OptionalSpec: XCTestCase {
         }
 
         // (m >>= f) >>= g = m >>= (\x -> f x >>= g)
-        property("associativity law") <- forAll { (o: OptionalOf<String>, fa: ArrowOf<String, String>, fb: ArrowOf<String, String>) in
+        property("associativity law") <- forAll { (o: OptionalOf<Int>, fa: ArrowOf<Int, Int>, fb: ArrowOf<Int, Int>) in
             let m = o.getOptional
-            let f: String -> String? = compose(fa.getArrow, pure)
-            let g: String -> String? = compose(fb.getArrow, pure)
+            let f: Int -> Int? = compose(fa.getArrow, pure)
+            let g: Int -> Int? = compose(fb.getArrow, pure)
 
             let lhs = (m >>- f) >>- g
             let rhs = m >>- { x in f(x) >>- g }
