@@ -5,51 +5,63 @@ import Runes
 class ArraySpec: XCTestCase {
     func testFunctor() {
         // fmap id = id
-        property("identity law") <- forAll { (array: [String]) in
-            let lhs = id <^> array
-            let rhs = array
+        property("identity law") <- forAll { (xs: [String]) in
+            let lhs = id <^> xs
+            let rhs = xs
 
             return lhs == rhs
         }
 
-        // fmap (g . h) = (fmap g) . (fmap h)
-        property("function composition law") <- forAll { (array: [String]) in
-            let lhs = compose(append, prepend) <^> array
-            let rhs = compose(curry(<^>)(append), curry(<^>)(prepend))(array)
+        // fmap (f . g) = (fmap f) . (fmap g)
+        property("function composition law") <- forAll { (a: ArrayOf<String>, fa: ArrowOf<String, String>, fb: ArrowOf<String, String>) in
+            let xs = a.getArray
+            let f = fa.getArrow
+            let g = fb.getArrow
+
+            let lhs = compose(f, g) <^> xs
+            let rhs = compose(curry(<^>)(f), curry(<^>)(g))(xs)
 
             return lhs == rhs
         }
     }
 
     func testApplicative() {
-        // pure id <*> v = v
-        property("identity law") <- forAll { (array: [String]) in
-            let lhs = pure(id) <*> array
-            let rhs = array
+        // pure id <*> x = x
+        property("identity law") <- forAll { (xs: [String]) in
+            let lhs = pure(id) <*> xs
+            let rhs = xs
 
             return lhs == rhs
         }
 
         // pure f <*> pure x = pure (f x)
-        property("homomorphism law") <- forAll { (string: String) in
-            let lhs: [String] = pure(append) <*> pure(string)
-            let rhs: [String] = pure(append(string))
+        property("homomorphism law") <- forAll { (x: String, fa: ArrowOf<String, String>) in
+            let f = fa.getArrow
+
+            let lhs: [String] = pure(f) <*> pure(x)
+            let rhs: [String] = pure(f(x))
 
             return rhs == lhs
         }
 
-        // u <*> pure y = pure ($ y) <*> u
-        property("interchange law") <- forAll { (string: String) in
-            let lhs: [String] = pure(append) <*> pure(string)
-            let rhs: [String] = pure({ $0(string) }) <*> pure(append)
+        // f <*> pure x = pure ($ x) <*> f
+        property("interchange law") <- forAll { (x: String, fa: ArrayOf<ArrowOf<String, String>>) in
+            let f = fa.getArray.map { $0.getArrow }
+
+            let lhs = f <*> pure(x)
+            let rhs = pure({ $0(x) }) <*> f
 
             return lhs == rhs
         }
 
-        // u <*> (v <*> w) = pure (.) <*> u <*> v <*> w
-        property("composition law") <- forAll { (array: [String]) in
-            let lhs = pure(append) <*> (pure(prepend) <*> array)
-            let rhs = pure(curry(compose)) <*> pure(append)  <*> pure(prepend) <*> array
+        // f <*> (g <*> x) = pure (.) <*> f <*> g <*> x
+        property("composition law") <- forAll { (a: ArrayOf<String>, fa: ArrayOf<ArrowOf<String, String>>, fb: ArrayOf<ArrowOf<String, String>>) in
+            let x = a.getArray
+            let f = fa.getArray.map { $0.getArrow }
+            let g = fb.getArray.map { $0.getArrow }
+
+            let lhs = f <*> (g <*> x)
+            let rhs = pure(curry(compose)) <*> f <*> g <*> x
 
             return lhs == rhs
         }
@@ -57,25 +69,31 @@ class ArraySpec: XCTestCase {
 
     func testMonad() {
         // return x >>= f = f x
-        property("left identity law") <- forAll { (string: String) in
-            let lhs: [String] = pure(string) >>- compose(append, pure)
-            let rhs: [String] = compose(append, pure)(string)
+        property("left identity law") <- forAll { (x: String, fa: ArrowOf<String, String>) in
+            let f: String -> [String] = compose(fa.getArrow, pure)
+
+            let lhs = pure(x) >>- f
+            let rhs = f(x)
 
             return lhs == rhs
         }
 
         // m >>= return = m
-        property("right identity law") <- forAll { (array: [String]) in
-            let lhs = array >>- pure
-            let rhs = array
+        property("right identity law") <- forAll { (x: [String]) in
+            let lhs = x >>- pure
+            let rhs = x
 
             return lhs == rhs
         }
 
         // (m >>= f) >>= g = m >>= (\x -> f x >>= g)
-        property("associativity law") <- forAll { (array: [String]) in
-            let lhs = (array >>- compose(append, pure)) >>- compose(prepend, pure)
-            let rhs = array >>- { x in compose(append, pure)(x) >>- compose(prepend, pure) }
+        property("associativity law") <- forAll { (a: ArrayOf<String>, fa: ArrowOf<String, String>, fb: ArrowOf<String, String>) in
+            let m = a.getArray
+            let f: String -> [String] = compose(fa.getArrow, pure)
+            let g: String -> [String] = compose(fb.getArrow, pure)
+
+            let lhs = (m >>- f) >>- g
+            let rhs = m >>- { x in f(x) >>- g }
 
             return lhs == rhs
         }
