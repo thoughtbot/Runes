@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		4A8C7DE81A5F58330050914C /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8C7DE71A5F58330050914C /* Array.swift */; };
 		4A8C7DE91A5F58330050914C /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8C7DE71A5F58330050914C /* Array.swift */; };
+		51D4A3C31BAB3EC800BC6AE2 /* Runes.h in Headers */ = {isa = PBXBuildFile; fileRef = F802D4D71A5F218E005E236C /* Runes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51DE8A1A1BAB36BB00124320 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8C7DE71A5F58330050914C /* Array.swift */; };
+		51DE8A1B1BAB36BB00124320 /* Runes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802D4EE1A5F2341005E236C /* Runes.swift */; };
+		51DE8A1C1BAB36BB00124320 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802D4F01A5F23BE005E236C /* Optional.swift */; };
+		51DE8A261BAB36E600124320 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE8A121BAB363500124320 /* Runes.framework */; };
+		51DE8A2C1BAB373100124320 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8624C5C1A647E6F00C883B3 /* Functions.swift */; };
+		51DE8A2D1BAB373100124320 /* OptionalSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8624C371A645B0700C883B3 /* OptionalSpec.swift */; };
+		51DE8A2E1BAB373100124320 /* ArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8624C5F1A647EE400C883B3 /* ArraySpec.swift */; };
 		EAA6A5181B2F163B0058E9A8 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8C7DE71A5F58330050914C /* Array.swift */; };
 		EAA6A5191B2F163B0058E9A8 /* Runes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802D4EE1A5F2341005E236C /* Runes.swift */; };
 		EAA6A51A1B2F163B0058E9A8 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802D4F01A5F23BE005E236C /* Optional.swift */; };
@@ -34,6 +42,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		51DE8A271BAB36E600124320 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F802D4C91A5F218E005E236C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51DE8A111BAB363500124320;
+			remoteInfo = "Runes-tvOS";
+		};
 		F8624C2D1A645A9600C883B3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F802D4C91A5F218E005E236C /* Project object */;
@@ -75,6 +90,8 @@
 
 /* Begin PBXFileReference section */
 		4A8C7DE71A5F58330050914C /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		51DE8A121BAB363500124320 /* Runes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Runes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51DE8A211BAB36E600124320 /* Runes-tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Runes-tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAA6A5101B2F154D0058E9A8 /* Runes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Runes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F802D4D21A5F218E005E236C /* Runes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Runes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F802D4D61A5F218E005E236C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,6 +110,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		51DE8A0E1BAB363500124320 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51DE8A1E1BAB36E600124320 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51DE8A261BAB36E600124320 /* Runes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EAA6A50C1B2F154D0058E9A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -152,6 +184,8 @@
 				F8624C261A645A9600C883B3 /* Runes-iOS Tests.xctest */,
 				F8624C451A645C9500C883B3 /* Runes-Mac Tests.xctest */,
 				EAA6A5101B2F154D0058E9A8 /* Runes.framework */,
+				51DE8A121BAB363500124320 /* Runes.framework */,
+				51DE8A211BAB36E600124320 /* Runes-tvOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -240,6 +274,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		51DE8A0F1BAB363500124320 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51D4A3C31BAB3EC800BC6AE2 /* Runes.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EAA6A50D1B2F154D0058E9A8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -267,6 +309,42 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		51DE8A111BAB363500124320 /* Runes-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51DE8A171BAB363500124320 /* Build configuration list for PBXNativeTarget "Runes-tvOS" */;
+			buildPhases = (
+				51DE8A0D1BAB363500124320 /* Sources */,
+				51DE8A0E1BAB363500124320 /* Frameworks */,
+				51DE8A0F1BAB363500124320 /* Headers */,
+				51DE8A101BAB363500124320 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Runes-tvOS";
+			productName = "Runes-tvOS";
+			productReference = 51DE8A121BAB363500124320 /* Runes.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		51DE8A201BAB36E600124320 /* Runes-tvOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51DE8A291BAB36E600124320 /* Build configuration list for PBXNativeTarget "Runes-tvOS Tests" */;
+			buildPhases = (
+				51DE8A1D1BAB36E600124320 /* Sources */,
+				51DE8A1E1BAB36E600124320 /* Frameworks */,
+				51DE8A1F1BAB36E600124320 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				51DE8A281BAB36E600124320 /* PBXTargetDependency */,
+			);
+			name = "Runes-tvOS Tests";
+			productName = "Runes-tvOS Tests";
+			productReference = 51DE8A211BAB36E600124320 /* Runes-tvOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		EAA6A50F1B2F154D0058E9A8 /* Runes-watchOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAA6A5171B2F154D0058E9A8 /* Build configuration list for PBXNativeTarget "Runes-watchOS" */;
@@ -369,6 +447,12 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = thoughtbot;
 				TargetAttributes = {
+					51DE8A111BAB363500124320 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					51DE8A201BAB36E600124320 = {
+						CreatedOnToolsVersion = 7.1;
+					};
 					EAA6A50F1B2F154D0058E9A8 = {
 						CreatedOnToolsVersion = 7.0;
 					};
@@ -400,14 +484,30 @@
 			targets = (
 				F802D4D11A5F218E005E236C /* Runes-iOS */,
 				F86B2E0A1A5F2B8D00C3B8BD /* Runes-Mac */,
+				51DE8A111BAB363500124320 /* Runes-tvOS */,
 				F8624C251A645A9600C883B3 /* Runes-iOS Tests */,
 				F8624C441A645C9500C883B3 /* Runes-Mac Tests */,
+				51DE8A201BAB36E600124320 /* Runes-tvOS Tests */,
 				EAA6A50F1B2F154D0058E9A8 /* Runes-watchOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		51DE8A101BAB363500124320 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51DE8A1F1BAB36E600124320 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EAA6A50E1B2F154D0058E9A8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -446,6 +546,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		51DE8A0D1BAB363500124320 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51DE8A1A1BAB36BB00124320 /* Array.swift in Sources */,
+				51DE8A1B1BAB36BB00124320 /* Runes.swift in Sources */,
+				51DE8A1C1BAB36BB00124320 /* Optional.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51DE8A1D1BAB36E600124320 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51DE8A2D1BAB373100124320 /* OptionalSpec.swift in Sources */,
+				51DE8A2C1BAB373100124320 /* Functions.swift in Sources */,
+				51DE8A2E1BAB373100124320 /* ArraySpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EAA6A50B1B2F154D0058E9A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -499,6 +619,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		51DE8A281BAB36E600124320 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51DE8A111BAB363500124320 /* Runes-tvOS */;
+			targetProxy = 51DE8A271BAB36E600124320 /* PBXContainerItemProxy */;
+		};
 		F8624C2E1A645A9600C883B3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F802D4D11A5F218E005E236C /* Runes-iOS */;
@@ -512,6 +637,76 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		51DE8A181BAB363500124320 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.runes;
+				PRODUCT_NAME = Runes;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		51DE8A191BAB363500124320 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.runes;
+				PRODUCT_NAME = Runes;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		51DE8A2A1BAB36E600124320 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = Tests/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thoughtbot.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		51DE8A2B1BAB36E600124320 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = Tests/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thoughtbot.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
 		EAA6A5151B2F154D0058E9A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -811,6 +1006,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		51DE8A171BAB363500124320 /* Build configuration list for PBXNativeTarget "Runes-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51DE8A181BAB363500124320 /* Debug */,
+				51DE8A191BAB363500124320 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51DE8A291BAB36E600124320 /* Build configuration list for PBXNativeTarget "Runes-tvOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51DE8A2A1BAB36E600124320 /* Debug */,
+				51DE8A2B1BAB36E600124320 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EAA6A5171B2F154D0058E9A8 /* Build configuration list for PBXNativeTarget "Runes-watchOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

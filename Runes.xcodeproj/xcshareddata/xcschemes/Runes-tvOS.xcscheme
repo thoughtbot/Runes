@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0710"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,40 +14,21 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F802D4D11A5F218E005E236C"
+               BlueprintIdentifier = "51DE8A111BAB363500124320"
                BuildableName = "Runes.framework"
-               BlueprintName = "Runes-iOS"
+               BlueprintName = "Runes-tvOS"
                ReferencedContainer = "container:Runes.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F8624C251A645A9600C883B3"
-               BuildableName = "Runes-iOS Tests.xctest"
-               BlueprintName = "Runes-iOS Tests"
-               ReferencedContainer = "container:Runes.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F802D4D11A5F218E005E236C"
-            BuildableName = "Runes.framework"
-            BlueprintName = "Runes-iOS"
-            ReferencedContainer = "container:Runes.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -64,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F802D4D11A5F218E005E236C"
+            BlueprintIdentifier = "51DE8A111BAB363500124320"
             BuildableName = "Runes.framework"
-            BlueprintName = "Runes-iOS"
+            BlueprintName = "Runes-tvOS"
             ReferencedContainer = "container:Runes.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F802D4D11A5F218E005E236C"
+            BlueprintIdentifier = "51DE8A111BAB363500124320"
             BuildableName = "Runes.framework"
-            BlueprintName = "Runes-iOS"
+            BlueprintName = "Runes-tvOS"
             ReferencedContainer = "container:Runes.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
