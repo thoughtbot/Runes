@@ -70,7 +70,7 @@ class ArraySpec: XCTestCase {
     func testMonad() {
         // return x >>= f = f x
         property("left identity law") <- forAll { (x: Int, fa: ArrowOf<Int, Int>) in
-            let f: Int -> [Int] = compose(fa.getArrow, pure)
+            let f: Int -> [Int] = compose(pure, fa.getArrow)
 
             let lhs = pure(x) >>- f
             let rhs = f(x)
@@ -89,8 +89,8 @@ class ArraySpec: XCTestCase {
         // (m >>= f) >>= g = m >>= (\x -> f x >>= g)
         property("associativity law") <- forAll { (a: ArrayOf<Int>, fa: ArrowOf<Int, Int>, fb: ArrowOf<Int, Int>) in
             let m = a.getArray
-            let f: Int -> [Int] = compose(fa.getArrow, pure)
-            let g: Int -> [Int] = compose(fb.getArrow, pure)
+            let f: Int -> [Int] = compose(pure, fa.getArrow)
+            let g: Int -> [Int] = compose(pure, fb.getArrow)
 
             let lhs = (m >>- f) >>- g
             let rhs = m >>- { x in f(x) >>- g }

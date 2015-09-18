@@ -2,8 +2,8 @@ func id<A>(a: A) -> A {
     return a
 }
 
-func compose<A, B, C>(fa: A -> B, _ fb: B -> C) -> A -> C {
-    return { x in fb(fa(x)) }
+func compose<A, B, C>(f: B -> C, _ g: A -> B) -> A -> C {
+    return { x in f(g(x)) }
 }
 
 func curry<A, B, C>(f: (A, B) -> C) -> A -> B -> C {
