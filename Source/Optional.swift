@@ -84,3 +84,7 @@ public extension Optional {
         return f.flatMap { self.map($0) }
     }
 }
+
+func foo(bar: String!) {
+  print("hello world: \(bar!)")
+}
