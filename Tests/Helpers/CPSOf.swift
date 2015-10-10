@@ -1,7 +1,7 @@
 import SwiftCheck
 import Runes
 
-struct AsyncOf<T : Arbitrary> : Arbitrary {
+struct CPSOf<T : Arbitrary> : Arbitrary {
 
     let getAsync: (T->Void)->Void
 
@@ -9,8 +9,8 @@ struct AsyncOf<T : Arbitrary> : Arbitrary {
         self.getAsync = async
     }
 
-    static var arbitrary : Gen<AsyncOf<T>> {
-        return { x in return AsyncOf{$0(x)} } <^> T.arbitrary
+    static var arbitrary : Gen<CPSOf<T>> {
+        return { x in return CPSOf{$0(x)} } <^> T.arbitrary
     }
 }
 

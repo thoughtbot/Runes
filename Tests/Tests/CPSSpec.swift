@@ -3,10 +3,10 @@ import XCTest
 import Runes
 
 
-class AsyncSpec: XCTestCase {
+class CPSSpec: XCTestCase {
     func testFunctor() {
         // fmap id = id
-        property("identity law") <- forAll { (x: AsyncOf<Int>) in
+        property("identity law") <- forAll { (x: CPSOf<Int>) in
             let lhs = id <^> x.getAsync
             let rhs = x.getAsync
 
@@ -14,7 +14,7 @@ class AsyncSpec: XCTestCase {
         }
 
         // fmap (f . g) = (fmap f) . (fmap g)
-        property("function composition law") <- forAll { (o: AsyncOf<Int>, fa: ArrowOf<Int, Int>, fb: ArrowOf<Int, Int>) in
+        property("function composition law") <- forAll { (o: CPSOf<Int>, fa: ArrowOf<Int, Int>, fb: ArrowOf<Int, Int>) in
             let f = fa.getArrow
             let g = fb.getArrow
             let x = o.getAsync
@@ -28,7 +28,7 @@ class AsyncSpec: XCTestCase {
 
     func testApplicative() {
         // pure id <*> v = v
-        property("identity law") <- forAll { (x: AsyncOf<Int>) in
+        property("identity law") <- forAll { (x: CPSOf<Int>) in
             let lhs = pure(id) <*> x.getAsync
             let rhs = x.getAsync
 
@@ -46,7 +46,7 @@ class AsyncSpec: XCTestCase {
         }
 
         // f <*> pure x = pure ($ x) <*> f
-        property("interchange law") <- forAll { (x: Int, fa: AsyncOf<ArrowOf<Int, Int>>) in
+        property("interchange law") <- forAll { (x: Int, fa: CPSOf<ArrowOf<Int, Int>>) in
             let f = {$0.getArrow} <^> fa.getAsync
 
             let lhs = f <*> pure(x)
@@ -56,7 +56,7 @@ class AsyncSpec: XCTestCase {
         }
 
         // f <*> (g <*> x) = pure (.) <*> f <*> g <*> x
-        property("composition law") <- forAll { (o: AsyncOf<Int>, fa: AsyncOf<ArrowOf<Int, Int>>, fb: AsyncOf<ArrowOf<Int, Int>>) in
+        property("composition law") <- forAll { (o: CPSOf<Int>, fa: CPSOf<ArrowOf<Int, Int>>, fb: CPSOf<ArrowOf<Int, Int>>) in
             let x = o.getAsync
             let f = {$0.getArrow} <^> fa.getAsync
             let g = {$0.getArrow} <^> fb.getAsync
@@ -80,7 +80,7 @@ class AsyncSpec: XCTestCase {
         }
 
         // m >>= return = m
-        property("right identity law") <- forAll { (o: AsyncOf<Int>) in
+        property("right identity law") <- forAll { (o: CPSOf<Int>) in
             let x = o.getAsync
 
             let lhs = x >>- pure
@@ -90,7 +90,7 @@ class AsyncSpec: XCTestCase {
         }
 
         // (m >>= f) >>= g = m >>= (\x -> f x >>= g)
-        property("associativity law") <- forAll { (o: AsyncOf<Int>, fa: ArrowOf<Int, Int>, fb: ArrowOf<Int, Int>) in
+        property("associativity law") <- forAll { (o: CPSOf<Int>, fa: ArrowOf<Int, Int>, fb: ArrowOf<Int, Int>) in
             let m = o.getAsync
             let f: Int -> (Int->Void)->Void = compose(pure, fa.getArrow)
             let g: Int -> (Int->Void)->Void = compose(pure, fb.getArrow)
