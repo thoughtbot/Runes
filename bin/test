@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+set -o pipefail
+
+xcrun xcodebuild \
+  -project Runes.xcodeproj \
+  -scheme Runes-Mac \
+  test \
+  | xcpretty --color
+
