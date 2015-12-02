@@ -55,6 +55,34 @@ public func -<< <T, U>(f: T -> [U], a: [T]) -> [U] {
 }
 
 /**
+    compose two functions that produce arrays of values, from left to right
+
+    produces a function that applies that flatMaps the second function over each element in the result of the first function
+
+    - parameter f: A transformation function from type `A` to type `[B]`
+    - parameter g: A transformation function from type `B` to type `[C]`
+
+    - returns: A value of type `[C]`
+*/
+public func >-> <A, B, C>(f: A -> [B], g: B -> [C]) -> A -> [C] {
+    return { x in f(x) >>- g }
+}
+
+/**
+    compose two functions that produce arrays of values, from right to left
+
+    produces a function that applies that flatMaps the first function over each element in the result of the second function
+
+    - parameter f: A transformation function from type `B` to type `[C]`
+    - parameter g: A transformation function from type `A` to type `[B]`
+
+    - returns: A value of type `[C]`
+*/
+public func <-< <A, B, C>(f: B -> [C], g: A -> [B]) -> A -> [C] {
+    return { x in g(x) >>- f }
+}
+
+/**
     Wrap a value in a minimal context of `[]`
 
     - parameter a: A value of type `T`
