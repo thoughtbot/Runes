@@ -99,5 +99,29 @@ class OptionalSpec: XCTestCase {
 
             return lhs == rhs
         }
+
+        // (f >=> g) >=> h = f >=> (g >=> h)
+        property("left-to-right Kleisli composition of monads") <- forAll { (x: Int, fa: ArrowOf<Int, Int>, fb: ArrowOf<Int, Int>, fc: ArrowOf<Int, Int>) in
+            let f: Int -> Int? = pure • fa.getArrow
+            let g: Int -> Int? = pure • fb.getArrow
+            let h: Int -> Int? = pure • fc.getArrow
+
+            let lhs = (f >-> g) >-> h
+            let rhs = f >-> (g >-> h)
+
+            return lhs(x) == rhs(x)
+        }
+
+        // (f <=< g) <=< h = f <=< (g <=< h)
+        property("right-to-left Kleisli composition of monads") <- forAll { (x: Int, fa: ArrowOf<Int, Int>, fb: ArrowOf<Int, Int>, fc: ArrowOf<Int, Int>) in
+            let f: Int -> Int? = pure • fa.getArrow
+            let g: Int -> Int? = pure • fb.getArrow
+            let h: Int -> Int? = pure • fc.getArrow
+
+            let lhs = (f <-< g) <-< h
+            let rhs = f <-< (g <-< h)
+
+            return lhs(x) == rhs(x)
+        }
     }
 }

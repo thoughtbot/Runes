@@ -59,6 +59,36 @@ public func -<< <T, U>(@noescape f: T -> U?, a: T?) -> U? {
 }
 
 /**
+    compose two functions that produce optional values, from left to right
+
+    - If the result of the first function is `.None`, the second function will not be inoked and this will return `.None`
+    - If the result of the first function is `.Some`, the value is unwrapped and passed to the second function which may return `.None`
+
+    - parameter f: A transformation function from type `A` to type `Optional<B>`
+    - parameter g: A transformation function from type `B` to type `Optional<C>`
+
+    - returns: A function from type `A` to type `Optional<C>`
+*/
+public func >-> <A, B, C>(f: A -> B?, g: B -> C?) -> A -> C? {
+    return { x in f(x) >>- g }
+}
+
+/**
+    compose two functions that produce optional values, from right to left
+
+    - If the result of the first function is `.None`, the second function will not be inoked and this will return `.None`
+    - If the result of the first function is `.Some`, the value is unwrapped and passed to the second function which may return `.None`
+
+    - parameter f: A transformation function from type `B` to type `Optional<C>`
+    - parameter g: A transformation function from type `A` to type `Optional<B>`
+
+    - returns: A function from type `A` to type `Optional<C>`
+ */
+public func <-< <A, B, C>(f: B -> C?, g: A -> B?) -> A -> C? {
+    return { x in g(x) >>- f }
+}
+
+/**
     Wrap a value in a minimal context of `.Some`
 
     - parameter a: A value of type `T`
