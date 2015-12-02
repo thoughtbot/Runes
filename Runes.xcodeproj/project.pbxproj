@@ -178,7 +178,9 @@
 				F8624C321A645AB900C883B3 /* Tests */,
 				F802D4D31A5F218E005E236C /* Products */,
 			);
+			indentWidth = 4;
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		F802D4D31A5F218E005E236C /* Products */ = {
 			isa = PBXGroup;
