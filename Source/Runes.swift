@@ -50,3 +50,29 @@ infix operator -<< {
     // operator (`=`)
     precedence 100
 }
+
+/**
+compose two functions that produce results in a context, from left to right, returning a result in that context
+
+Expected function type: `(a -> m b) -> (b -> m c) -> a -> m c`
+*/
+infix operator >-> {
+    associativity right
+
+    // Same precedence as `>>-` and `-<<`.
+    precedence 100
+}
+
+/**
+compose two functions that produce results in a context, from right to left, returning a result in that context
+
+like `>->`, but with the arguments flipped
+
+Expected function type: `(b -> m c) -> (a -> m b) -> a -> m c`
+*/
+infix operator <-< {
+    associativity right
+
+    // Same precedence as `>>-` and `-<<`.
+    precedence 100
+}
