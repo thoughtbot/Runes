@@ -55,6 +55,34 @@ public func -<< <T, U>(f: T -> (U -> Void) -> Void, a: (T -> Void) -> Void) -> (
 }
 
 /**
+ compose two functions that produce CPS functions, from left to right
+
+ produces a function that applies that flatMaps the second function over the result of the first function
+
+ - parameter f: A transformation function from type `A` to type `(B->Void)->Void`
+ - parameter g: A transformation function from type `B` to type `(C->Void)->Void`
+
+ - returns: A value of type `(C->Void)->Void`
+ */
+public func >-> <A, B, C>(f: A -> (B->Void)->Void, g: B -> (C->Void)->Void) -> A -> (C->Void)->Void {
+    return { x in f(x) >>- g }
+}
+
+/**
+ compose two functions that produce CPS functions, from right to left
+
+ produces a function that applies that flatMaps the first function over the result of the second function
+
+ - parameter f: A transformation function from type `B` to type `(C->Void)->Void`
+ - parameter g: A transformation function from type `A` to type `(B->Void)->Void`
+
+ - returns: A value of type `(C->Void)->Void`
+ */
+public func <-< <A, B, C>(f: B -> (C->Void)->Void, g: A -> (B->Void)->Void) -> A -> (C->Void)->Void {
+    return { x in g(x) >>- f }
+}
+
+/**
     Wrap a value in a minimal context of `{$0(x)}`
 
     - parameter a: A value of type `T`

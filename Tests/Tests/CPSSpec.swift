@@ -19,8 +19,8 @@ class CPSSpec: XCTestCase {
             let g = fb.getArrow
             let x = o.getAsync
 
-            let lhs = compose(f, g) <^> x
-            let rhs = compose(curry(<^>)(f), curry(<^>)(g))(x)
+            let lhs = f • g <^> x
+            let rhs = (curry(<^>)(f) • curry(<^>)(g))(x)
 
             return lhs == rhs
         }
@@ -62,7 +62,7 @@ class CPSSpec: XCTestCase {
             let g = {$0.getArrow} <^> fb.getAsync
 
             let lhs = f <*> (g <*> x)
-            let rhs = pure(curry(compose)) <*> f <*> g <*> x
+            let rhs = pure(curry(•)) <*> f <*> g <*> x
 
             return lhs == rhs
         }
@@ -71,7 +71,7 @@ class CPSSpec: XCTestCase {
     func testMonad() {
         // return x >>= f = f x
         property("left identity law") <- forAll { (x: Int, fa: ArrowOf<Int, Int>) in
-            let f: Int -> (Int->Void)->Void = compose(pure, fa.getArrow)
+            let f: Int -> (Int->Void)->Void = pure • fa.getArrow
 
             let lhs = pure(x) >>- f
             let rhs = f(x)
@@ -92,13 +92,37 @@ class CPSSpec: XCTestCase {
         // (m >>= f) >>= g = m >>= (\x -> f x >>= g)
         property("associativity law") <- forAll { (o: CPSOf<Int>, fa: ArrowOf<Int, Int>, fb: ArrowOf<Int, Int>) in
             let m = o.getAsync
-            let f: Int -> (Int->Void)->Void = compose(pure, fa.getArrow)
-            let g: Int -> (Int->Void)->Void = compose(pure, fb.getArrow)
+            let f: Int -> (Int->Void)->Void = pure • fa.getArrow
+            let g: Int -> (Int->Void)->Void = pure • fb.getArrow
             
             let lhs = (m >>- f) >>- g
             let rhs = m >>- { x in f(x) >>- g }
             
             return lhs == rhs
+        }
+
+        // (f >=> g) >=> h = f >=> (g >=> h)
+        property("left-to-right Kleisli composition of monads") <- forAll { (x: Int, fa: ArrowOf<Int, Int>, fb: ArrowOf<Int, Int>, fc: ArrowOf<Int, Int>) in
+            let f: Int -> (Int->Void)->Void = pure • fa.getArrow
+            let g: Int -> (Int->Void)->Void = pure • fb.getArrow
+            let h: Int -> (Int->Void)->Void = pure • fc.getArrow
+
+            let lhs = (f >-> g) >-> h
+            let rhs = f >-> (g >-> h)
+
+            return lhs(x) == rhs(x)
+        }
+
+        // (f <=< g) <=< h = f <=< (g <=< h)
+        property("right-to-left Kleisli composition of monads") <- forAll { (x: Int, fa: ArrowOf<Int, Int>, fb: ArrowOf<Int, Int>, fc: ArrowOf<Int, Int>) in
+            let f: Int -> (Int->Void)->Void = pure • fa.getArrow
+            let g: Int -> (Int->Void)->Void = pure • fb.getArrow
+            let h: Int -> (Int->Void)->Void = pure • fc.getArrow
+
+            let lhs = (f <-< g) <-< h
+            let rhs = f <-< (g <-< h)
+
+            return lhs(x) == rhs(x)
         }
     }
 }
