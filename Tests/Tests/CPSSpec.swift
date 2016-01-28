@@ -94,10 +94,10 @@ class CPSSpec: XCTestCase {
             let m = o.getAsync
             let f: Int -> (Int->Void)->Void = pure • fa.getArrow
             let g: Int -> (Int->Void)->Void = pure • fb.getArrow
-            
+
             let lhs = (m >>- f) >>- g
             let rhs = m >>- { x in f(x) >>- g }
-            
+
             return lhs == rhs
         }
 
@@ -118,10 +118,10 @@ class CPSSpec: XCTestCase {
             let f: Int -> (Int->Void)->Void = pure • fa.getArrow
             let g: Int -> (Int->Void)->Void = pure • fb.getArrow
             let h: Int -> (Int->Void)->Void = pure • fc.getArrow
-
+            
             let lhs = (f <-< g) <-< h
             let rhs = f <-< (g <-< h)
-
+            
             return lhs(x) == rhs(x)
         }
     }
