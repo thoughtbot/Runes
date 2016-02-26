@@ -8,3 +8,24 @@ xcrun xcodebuild \
   test \
   | xcpretty --color
 
+xcrun xcodebuild \
+  -project Runes.xcodeproj \
+  -scheme Runes-iOS \
+  -destination "platform=iOS Simulator,name=iPhone 6" \
+  test \
+  | xcpretty --color
+
+xcrun xcodebuild \
+  -project Runes.xcodeproj \
+  -scheme Runes-watchOS \
+  -destination "generic/platform=watchOS" \
+  CODE_SIGNING_REQUIRED=NO \
+  CODE_SIGN_IDENTITY="" \
+  | xcpretty --color
+
+xcrun xcodebuild \
+  -project Runes.xcodeproj \
+  -scheme Runes-tvOS \
+  -destination "platform=tvOS Simulator,name=Apple TV 1080p" \
+  test \
+  | xcpretty --color

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4A8C7DE81A5F58330050914C /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8C7DE71A5F58330050914C /* Array.swift */; };
 		4A8C7DE91A5F58330050914C /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8C7DE71A5F58330050914C /* Array.swift */; };
-		51D4A3C31BAB3EC800BC6AE2 /* Runes.h in Headers */ = {isa = PBXBuildFile; fileRef = F802D4D71A5F218E005E236C /* Runes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		51DE8A1A1BAB36BB00124320 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8C7DE71A5F58330050914C /* Array.swift */; };
 		51DE8A1B1BAB36BB00124320 /* Runes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802D4EE1A5F2341005E236C /* Runes.swift */; };
 		51DE8A1C1BAB36BB00124320 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802D4F01A5F23BE005E236C /* Optional.swift */; };
@@ -23,8 +22,6 @@
 		EAA6A5181B2F163B0058E9A8 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8C7DE71A5F58330050914C /* Array.swift */; };
 		EAA6A5191B2F163B0058E9A8 /* Runes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802D4EE1A5F2341005E236C /* Runes.swift */; };
 		EAA6A51A1B2F163B0058E9A8 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802D4F01A5F23BE005E236C /* Optional.swift */; };
-		EAA6A51B1B2F163F0058E9A8 /* Runes.h in Headers */ = {isa = PBXBuildFile; fileRef = F802D4D71A5F218E005E236C /* Runes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F802D4D81A5F218E005E236C /* Runes.h in Headers */ = {isa = PBXBuildFile; fileRef = F802D4D71A5F218E005E236C /* Runes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F802D4EF1A5F2341005E236C /* Runes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802D4EE1A5F2341005E236C /* Runes.swift */; };
 		F802D4F11A5F23BE005E236C /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802D4F01A5F23BE005E236C /* Optional.swift */; };
 		F8624C2C1A645A9600C883B3 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F802D4D21A5F218E005E236C /* Runes.framework */; };
@@ -35,13 +32,18 @@
 		F8624C5E1A647E7300C883B3 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8624C5C1A647E6F00C883B3 /* Functions.swift */; };
 		F8624C601A647EE400C883B3 /* ArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8624C5F1A647EE400C883B3 /* ArraySpec.swift */; };
 		F8624C611A647FB300C883B3 /* ArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8624C5F1A647EE400C883B3 /* ArraySpec.swift */; };
-		F86B2E241A5F2B9E00C3B8BD /* Runes.h in Headers */ = {isa = PBXBuildFile; fileRef = F802D4D71A5F218E005E236C /* Runes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F86B2E251A5F2BA400C3B8BD /* Runes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802D4EE1A5F2341005E236C /* Runes.swift */; };
 		F86B2E261A5F2BA400C3B8BD /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802D4F01A5F23BE005E236C /* Optional.swift */; };
 		F88DE9731BA3854E00A9D383 /* SwiftCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88DE9721BA3854E00A9D383 /* SwiftCheck.framework */; };
 		F88DE9751BA3855600A9D383 /* SwiftCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88DE9741BA3855600A9D383 /* SwiftCheck.framework */; };
 		F89776E51BA601D500EE823E /* SwiftCheck.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F88DE9741BA3855600A9D383 /* SwiftCheck.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F89776E61BA601DE00EE823E /* SwiftCheck.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F88DE9721BA3854E00A9D383 /* SwiftCheck.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F8E1AECB1C80F3390029E26B /* Runes.h in Headers */ = {isa = PBXBuildFile; fileRef = F8E1AECA1C80F3320029E26B /* Runes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8E1AECC1C80F33A0029E26B /* Runes.h in Headers */ = {isa = PBXBuildFile; fileRef = F8E1AECA1C80F3320029E26B /* Runes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8E1AECD1C80F33A0029E26B /* Runes.h in Headers */ = {isa = PBXBuildFile; fileRef = F8E1AECA1C80F3320029E26B /* Runes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8E1AECE1C80F33B0029E26B /* Runes.h in Headers */ = {isa = PBXBuildFile; fileRef = F8E1AECA1C80F3320029E26B /* Runes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8E1AED81C8104770029E26B /* SwiftCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E1AED61C8104610029E26B /* SwiftCheck.framework */; };
+		F8E1AEDB1C8106200029E26B /* SwiftCheck.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8E1AED61C8104610029E26B /* SwiftCheck.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F8E1AED91C8105F20029E26B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F8E1AEDB1C8106200029E26B /* SwiftCheck.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -98,19 +110,19 @@
 		CE3407801C0E9F0A00C84170 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		EAA6A5101B2F154D0058E9A8 /* Runes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Runes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F802D4D21A5F218E005E236C /* Runes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Runes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F802D4D61A5F218E005E236C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F802D4D71A5F218E005E236C /* Runes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Runes.h; sourceTree = "<group>"; };
 		F802D4EE1A5F2341005E236C /* Runes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Runes.swift; sourceTree = "<group>"; };
 		F802D4F01A5F23BE005E236C /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		F8624C261A645A9600C883B3 /* Runes-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Runes-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8624C341A645AB900C883B3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8624C371A645B0700C883B3 /* OptionalSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalSpec.swift; sourceTree = "<group>"; };
+		F8624C371A645B0700C883B3 /* OptionalSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionalSpec.swift; path = ../Tests/OptionalSpec.swift; sourceTree = "<group>"; };
 		F8624C451A645C9500C883B3 /* Runes-Mac Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Runes-Mac Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8624C5C1A647E6F00C883B3 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		F8624C5F1A647EE400C883B3 /* ArraySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArraySpec.swift; sourceTree = "<group>"; };
 		F86B2E0B1A5F2B8D00C3B8BD /* Runes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Runes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F88DE9721BA3854E00A9D383 /* SwiftCheck.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftCheck.framework; path = Carthage/Build/iOS/SwiftCheck.framework; sourceTree = SOURCE_ROOT; };
 		F88DE9741BA3855600A9D383 /* SwiftCheck.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftCheck.framework; path = Carthage/Build/Mac/SwiftCheck.framework; sourceTree = SOURCE_ROOT; };
+		F8E1AEC91C80F3320029E26B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8E1AECA1C80F3320029E26B /* Runes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Runes.h; sourceTree = "<group>"; };
+		F8E1AED61C8104610029E26B /* SwiftCheck.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftCheck.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51DE8A261BAB36E600124320 /* Runes.framework in Frameworks */,
+				F8E1AED81C8104770029E26B /* SwiftCheck.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +189,7 @@
 			children = (
 				F802D4D41A5F218E005E236C /* Source */,
 				F8624C321A645AB900C883B3 /* Tests */,
+				F8E1AEC81C80F3320029E26B /* Resources */,
 				F802D4D31A5F218E005E236C /* Products */,
 			);
 			indentWidth = 4;
@@ -202,18 +216,8 @@
 				4A8C7DE71A5F58330050914C /* Array.swift */,
 				F802D4EE1A5F2341005E236C /* Runes.swift */,
 				F802D4F01A5F23BE005E236C /* Optional.swift */,
-				F802D4D51A5F218E005E236C /* Supporting Files */,
 			);
 			path = Source;
-			sourceTree = "<group>";
-		};
-		F802D4D51A5F218E005E236C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F802D4D71A5F218E005E236C /* Runes.h */,
-				F802D4D61A5F218E005E236C /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		F8624C321A645AB900C883B3 /* Tests */ = {
@@ -221,24 +225,14 @@
 			children = (
 				F8624C5B1A647E5500C883B3 /* Helpers */,
 				F8624C361A645AE300C883B3 /* Tests */,
-				F8624C331A645AB900C883B3 /* Resources */,
 				F8624C391A645B1300C883B3 /* Frameworks */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		F8624C331A645AB900C883B3 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				F8624C341A645AB900C883B3 /* Info.plist */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		F8624C361A645AE300C883B3 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F8624C371A645B0700C883B3 /* OptionalSpec.swift */,
 				F8624C5F1A647EE400C883B3 /* ArraySpec.swift */,
 			);
 			path = Tests;
@@ -249,6 +243,7 @@
 			children = (
 				F8624C531A645CF400C883B3 /* OS X */,
 				F8624C521A645CE200C883B3 /* iOS */,
+				F8E1AECF1C8104610029E26B /* tvOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -272,11 +267,30 @@
 		F8624C5B1A647E5500C883B3 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F8624C371A645B0700C883B3 /* OptionalSpec.swift */,
 				F8624C5C1A647E6F00C883B3 /* Functions.swift */,
 				CE3407801C0E9F0A00C84170 /* Operators.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
+		};
+		F8E1AEC81C80F3320029E26B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F8E1AEC91C80F3320029E26B /* Info.plist */,
+				F8E1AECA1C80F3320029E26B /* Runes.h */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F8E1AECF1C8104610029E26B /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				F8E1AED61C8104610029E26B /* SwiftCheck.framework */,
+			);
+			name = tvOS;
+			path = Carthage/Build/tvOS;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -285,7 +299,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51D4A3C31BAB3EC800BC6AE2 /* Runes.h in Headers */,
+				F8E1AECD1C80F33A0029E26B /* Runes.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +307,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAA6A51B1B2F163F0058E9A8 /* Runes.h in Headers */,
+				F8E1AECE1C80F33B0029E26B /* Runes.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +315,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F802D4D81A5F218E005E236C /* Runes.h in Headers */,
+				F8E1AECB1C80F3390029E26B /* Runes.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,7 +323,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F86B2E241A5F2B9E00C3B8BD /* Runes.h in Headers */,
+				F8E1AECC1C80F33A0029E26B /* Runes.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +355,7 @@
 				51DE8A1D1BAB36E600124320 /* Sources */,
 				51DE8A1E1BAB36E600124320 /* Frameworks */,
 				51DE8A1F1BAB36E600124320 /* Resources */,
+				F8E1AED91C8105F20029E26B /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -656,7 +671,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.runes;
@@ -677,7 +692,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.runes;
@@ -693,8 +708,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = Tests/Resources/Info.plist;
+				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.thoughtbot.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -707,8 +726,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = Tests/Resources/Info.plist;
+				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.thoughtbot.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -727,7 +750,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.runes;
@@ -749,7 +772,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.runes;
@@ -858,7 +881,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.runes;
@@ -877,7 +900,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.runes;
@@ -899,7 +922,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = Tests/Resources/Info.plist;
+				INFOPLIST_FILE = Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.thoughtbot.$(PRODUCT_NAME:rfc1034identifier)";
@@ -917,7 +940,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Tests/Resources/Info.plist;
+				INFOPLIST_FILE = Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.thoughtbot.$(PRODUCT_NAME:rfc1034identifier)";
@@ -938,7 +961,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = Tests/Resources/Info.plist;
+				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.thoughtbot.$(PRODUCT_NAME:rfc1034identifier)";
@@ -957,7 +980,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = Tests/Resources/Info.plist;
+				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.thoughtbot.$(PRODUCT_NAME:rfc1034identifier)";
@@ -980,7 +1003,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
@@ -1002,7 +1025,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
