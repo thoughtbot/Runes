@@ -42,6 +42,8 @@
 		F88DE9751BA3855600A9D383 /* SwiftCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88DE9741BA3855600A9D383 /* SwiftCheck.framework */; };
 		F89776E51BA601D500EE823E /* SwiftCheck.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F88DE9741BA3855600A9D383 /* SwiftCheck.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F89776E61BA601DE00EE823E /* SwiftCheck.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F88DE9721BA3854E00A9D383 /* SwiftCheck.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F8E1AED81C8104770029E26B /* SwiftCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E1AED61C8104610029E26B /* SwiftCheck.framework */; };
+		F8E1AEDB1C8106200029E26B /* SwiftCheck.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8E1AED61C8104610029E26B /* SwiftCheck.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F8E1AED91C8105F20029E26B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F8E1AEDB1C8106200029E26B /* SwiftCheck.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +123,7 @@
 		F86B2E0B1A5F2B8D00C3B8BD /* Runes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Runes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F88DE9721BA3854E00A9D383 /* SwiftCheck.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftCheck.framework; path = Carthage/Build/iOS/SwiftCheck.framework; sourceTree = SOURCE_ROOT; };
 		F88DE9741BA3855600A9D383 /* SwiftCheck.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftCheck.framework; path = Carthage/Build/Mac/SwiftCheck.framework; sourceTree = SOURCE_ROOT; };
+		F8E1AED61C8104610029E26B /* SwiftCheck.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftCheck.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51DE8A261BAB36E600124320 /* Runes.framework in Frameworks */,
+				F8E1AED81C8104770029E26B /* SwiftCheck.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +263,7 @@
 			children = (
 				F8624C531A645CF400C883B3 /* OS X */,
 				F8624C521A645CE200C883B3 /* iOS */,
+				F8E1AECF1C8104610029E26B /* tvOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -277,6 +292,15 @@
 			);
 			path = Helpers;
 			sourceTree = "<group>";
+		};
+		F8E1AECF1C8104610029E26B /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				F8E1AED61C8104610029E26B /* SwiftCheck.framework */,
+			);
+			name = tvOS;
+			path = Carthage/Build/tvOS;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -341,6 +365,7 @@
 				51DE8A1D1BAB36E600124320 /* Sources */,
 				51DE8A1E1BAB36E600124320 /* Frameworks */,
 				51DE8A1F1BAB36E600124320 /* Resources */,
+				F8E1AED91C8105F20029E26B /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -693,6 +718,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = Tests/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -707,6 +736,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = Tests/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
