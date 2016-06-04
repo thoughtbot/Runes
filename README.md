@@ -114,8 +114,8 @@ Importing Runes introduces several new operators and one global function:
 - `>>-` (pronounced "flatMap") (left associative)
 - `-<<` (pronounced "flatMap") (right associative)
 - `pure` (pronounced "pure")
-- `>->` (pronounced "left-to-right Kleisli arrow")
-- `<-<` (pronounced "right-to-left Kleisli arrow")
+- `>->` (pronounced "Kleisli arrow") (left associative)
+- `<-<` (pronounced "Kleisli arrow") (right associative)
 
 We also include default implementations for Optional and Array with the
 following type signatures:
