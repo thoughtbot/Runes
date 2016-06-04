@@ -107,13 +107,15 @@ spec.source_files = 'Argo/**/*.{h,swift}', 'Carthage/Checkouts/Runes/Source/Rune
 
 ## What's included? ##
 
-Importing Runes introduces 3 new operators and one global function:
+Importing Runes introduces several new operators and one global function:
 
 - `<^>` (pronounced "map")
 - `<*>` (pronounced "apply")
 - `>>-` (pronounced "flatMap") (left associative)
 - `-<<` (pronounced "flatMap") (right associative)
 - `pure` (pronounced "pure")
+- `>->` (pronounced "left-to-right Kleisli arrow")
+- `<-<` (pronounced "right-to-left Kleisli arrow")
 
 We also include default implementations for Optional and Array with the
 following type signatures:
@@ -125,6 +127,8 @@ public func <*><T, U>(f: (T -> U)?, a: T?) -> U?
 public func >>-<T, U>(a: T?, f: T -> U?) -> U?
 public func -<<<T, U>(f: T -> U?, a: T?) -> U?
 public func pure<T>(a: T) -> T?
+public func >-> <A, B, C>(f: A -> B?, g: B -> C?) -> A -> C?
+public func <-< <A, B, C>(f: B -> C?, g: A -> B?) -> A -> C?
 
 // Array:
 public func <^><T, U>(f: T -> U, a: [T]) -> [U]
@@ -132,6 +136,8 @@ public func <*><T, U>(fs: [T -> U], a: [T]) -> [U]
 public func >>-<T, U>(a: [T], f: T -> [U]) -> [U]
 public func -<<<T, U>(f: T -> [U], a: [T]) -> [U]
 public func pure<T>(a: T) -> [T]
+public func >-> <A, B, C>(f: A -> [B], g: B -> [C]) -> A -> [C]
+public func <-< <A, B, C>(f: B -> [C], g: A -> [B]) -> A -> [C]
 ```
 
 Contributing
