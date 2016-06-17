@@ -4,10 +4,22 @@ Indecipherable symbols that some people claim have actual meaning.
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-## Source Compatibility ##
+## Version Compatibility ##
 
-The source on `master` assumes Swift 2.0, and will be released as Runes 3.0.
-If you need Swift 1.2 support, please use the 2.X series of releases.
+Note that we're aggressive about pushing `master` forward along with new
+versions of Swift. Therefor, we highly recommend against pointing at `master`,
+and instead using [one of the releases we've provided][releases].
+
+Here is the current Swift compatibility breakdown:
+
+| Swift Version | Runes Version |
+| ------------- | ------------- |
+| 3.X           | master        |
+| 2.X           | 3.X           |
+| 1.2           | 1.2, 2.X      |
+| 1.1           | < 1.2         |
+
+[releases]: https://github.com/thoughtbot/Runes/releases
 
 ## Framework Installation ##
 
