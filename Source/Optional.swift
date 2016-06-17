@@ -9,7 +9,7 @@
 
     - returns: A value of type `Optional<U>`
 */
-public func <^> <T, U>(@noescape f: T -> U, a: T?) -> U? {
+public func <^> <T, U>(f: @noescape (T) -> U, a: T?) -> U? {
     return a.map(f)
 }
 
@@ -24,7 +24,7 @@ public func <^> <T, U>(@noescape f: T -> U, a: T?) -> U? {
 
     - returns: A value of type `Optional<U>`
 */
-public func <*> <T, U>(f: (T -> U)?, a: T?) -> U? {
+public func <*> <T, U>(f: ((T) -> U)?, a: T?) -> U? {
     return a.apply(f)
 }
 
@@ -39,7 +39,7 @@ public func <*> <T, U>(f: (T -> U)?, a: T?) -> U? {
 
     - returns: A value of type `Optional<U>`
 */
-public func >>- <T, U>(a: T?, @noescape f: T -> U?) -> U? {
+public func >>- <T, U>(a: T?, f: @noescape (T) -> U?) -> U? {
     return a.flatMap(f)
 }
 
@@ -54,7 +54,7 @@ public func >>- <T, U>(a: T?, @noescape f: T -> U?) -> U? {
 
     - returns: A value of type `Optional<U>`
 */
-public func -<< <T, U>(@noescape f: T -> U?, a: T?) -> U? {
+public func -<< <T, U>(f: @noescape (T) -> U?, a: T?) -> U? {
   return a.flatMap(f)
 }
 
@@ -69,7 +69,7 @@ public func -<< <T, U>(@noescape f: T -> U?, a: T?) -> U? {
 
     - returns: A function from type `A` to type `Optional<C>`
 */
-public func >-> <A, B, C>(f: A -> B?, g: B -> C?) -> A -> C? {
+public func >-> <A, B, C>(f: (A) -> B?, g: (B) -> C?) -> (A) -> C? {
     return { x in f(x) >>- g }
 }
 
@@ -84,7 +84,7 @@ public func >-> <A, B, C>(f: A -> B?, g: B -> C?) -> A -> C? {
 
     - returns: A function from type `A` to type `Optional<C>`
  */
-public func <-< <A, B, C>(f: B -> C?, g: A -> B?) -> A -> C? {
+public func <-< <A, B, C>(f: (B) -> C?, g: (A) -> B?) -> (A) -> C? {
     return { x in g(x) >>- f }
 }
 
@@ -96,7 +96,7 @@ public func <-< <A, B, C>(f: B -> C?, g: A -> B?) -> A -> C? {
     - returns: The provided value wrapped in `.Some`
 */
 public func pure<T>(a: T) -> T? {
-    return .Some(a)
+    return .some(a)
 }
 
 public extension Optional {
@@ -110,7 +110,7 @@ public extension Optional {
 
         - returns: A value of type `Optional<U>`
     */
-    func apply<U>(f: (Wrapped -> U)?) -> U? {
+    func apply<U>(_ f: ((Wrapped) -> U)?) -> U? {
         return f.flatMap { self.map($0) }
     }
 }
