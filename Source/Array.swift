@@ -89,7 +89,7 @@ public func <-< <T, U, V>(f: (U) -> [V], g: (T) -> [U]) -> (T) -> [V] {
 
     - returns: The provided value wrapped in an array
 */
-public func pure<T>(a: T) -> [T] {
+public func pure<T>(_ a: T) -> [T] {
     return [a]
 }
 
