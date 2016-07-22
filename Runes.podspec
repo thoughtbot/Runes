@@ -12,6 +12,7 @@ Pod::Spec.new do |spec|
   spec.source = { :git => 'https://github.com/thoughtbot/runes.git', :tag => "v#{spec.version}" }
   spec.source_files = 'Source/**/*.{h,swift}'
   spec.requires_arc = true
+  spec.compiler_flags = '-whole-module-optimization'
   spec.ios.deployment_target = '8.0'
   spec.osx.deployment_target = '10.9'
   spec.watchos.deployment_target = '2.0'
