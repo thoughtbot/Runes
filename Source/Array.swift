@@ -59,12 +59,12 @@ public func -<< <T, U>(f: (T) -> [U], a: [T]) -> [U] {
 
     produces a function that applies that flatMaps the second function over each element in the result of the first function
 
-    - parameter f: A transformation function from type `A` to type `[B]`
-    - parameter g: A transformation function from type `B` to type `[C]`
+    - parameter f: A transformation function from type `T` to type `[U]`
+    - parameter g: A transformation function from type `U` to type `[V]`
 
-    - returns: A value of type `[C]`
+    - returns: A value of type `[V]`
 */
-public func >-> <A, B, C>(f: (A) -> [B], g: (B) -> [C]) -> (A) -> [C] {
+public func >-> <T, U, V>(f: (T) -> [U], g: (U) -> [V]) -> (T) -> [V] {
     return { x in f(x) >>- g }
 }
 
@@ -73,12 +73,12 @@ public func >-> <A, B, C>(f: (A) -> [B], g: (B) -> [C]) -> (A) -> [C] {
 
     produces a function that applies that flatMaps the first function over each element in the result of the second function
 
-    - parameter f: A transformation function from type `B` to type `[C]`
-    - parameter g: A transformation function from type `A` to type `[B]`
+    - parameter f: A transformation function from type `U` to type `[V]`
+    - parameter g: A transformation function from type `T` to type `[U]`
 
-    - returns: A value of type `[C]`
+    - returns: A value of type `[V]`
 */
-public func <-< <A, B, C>(f: (B) -> [C], g: (A) -> [B]) -> (A) -> [C] {
+public func <-< <T, U, V>(f: (U) -> [V], g: (T) -> [U]) -> (T) -> [V] {
     return { x in g(x) >>- f }
 }
 
@@ -99,11 +99,11 @@ public extension Array {
 
         This will return a new array resulting from the matrix of each function being applied to each value inside `self`
 
-        - parameter fs: An array of transformation functions from type `Element` to type `U`
+        - parameter fs: An array of transformation functions from type `Element` to type `T`
 
-        - returns: A value of type `[U]`
+        - returns: A value of type `[T]`
     */
-    func apply<U>(_ fs: [(Element) -> U]) -> [U] {
+    func apply<T>(_ fs: [(Element) -> T]) -> [T] {
         return fs.flatMap { self.map($0) }
     }
 }

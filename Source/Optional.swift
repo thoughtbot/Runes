@@ -64,12 +64,12 @@ public func -<< <T, U>(f: @noescape (T) -> U?, a: T?) -> U? {
     - If the result of the first function is `.None`, the second function will not be inoked and this will return `.None`
     - If the result of the first function is `.Some`, the value is unwrapped and passed to the second function which may return `.None`
 
-    - parameter f: A transformation function from type `A` to type `Optional<B>`
-    - parameter g: A transformation function from type `B` to type `Optional<C>`
+    - parameter f: A transformation function from type `T` to type `Optional<U>`
+    - parameter g: A transformation function from type `U` to type `Optional<V>`
 
-    - returns: A function from type `A` to type `Optional<C>`
+    - returns: A function from type `T` to type `Optional<V>`
 */
-public func >-> <A, B, C>(f: (A) -> B?, g: (B) -> C?) -> (A) -> C? {
+public func >-> <T, U, V>(f: (T) -> U?, g: (U) -> V?) -> (T) -> V? {
     return { x in f(x) >>- g }
 }
 
@@ -79,12 +79,12 @@ public func >-> <A, B, C>(f: (A) -> B?, g: (B) -> C?) -> (A) -> C? {
     - If the result of the first function is `.None`, the second function will not be inoked and this will return `.None`
     - If the result of the first function is `.Some`, the value is unwrapped and passed to the second function which may return `.None`
 
-    - parameter f: A transformation function from type `B` to type `Optional<C>`
-    - parameter g: A transformation function from type `A` to type `Optional<B>`
+    - parameter f: A transformation function from type `U` to type `Optional<V>`
+    - parameter g: A transformation function from type `T` to type `Optional<U>`
 
-    - returns: A function from type `A` to type `Optional<C>`
+    - returns: A function from type `T` to type `Optional<V>`
  */
-public func <-< <A, B, C>(f: (B) -> C?, g: (A) -> B?) -> (A) -> C? {
+public func <-< <T, U, V>(f: (U) -> V?, g: (T) -> U?) -> (T) -> V? {
     return { x in g(x) >>- f }
 }
 
@@ -106,11 +106,11 @@ public extension Optional {
         - If either self or the function are `.None`, the function will not be evaluated and this will return `.None`
         - If both self and the function are `.Some`, the function will be applied to the unwrapped value
 
-        - parameter f: An optional transformation function from type `Wrapped` to type `U`
+        - parameter f: An optional transformation function from type `Wrapped` to type `T`
 
-        - returns: A value of type `Optional<U>`
+        - returns: A value of type `Optional<T>`
     */
-    func apply<U>(_ f: ((Wrapped) -> U)?) -> U? {
+    func apply<T>(_ f: ((Wrapped) -> T)?) -> T? {
         return f.flatMap { self.map($0) }
     }
 }
