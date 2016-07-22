@@ -70,7 +70,7 @@ class ArraySpec: XCTestCase {
     func testMonad() {
         // return x >>= f = f x
         property("left identity law") <- forAll { (x: Int, fa: ArrowOf<Int, Int>) in
-            let f: Int -> [Int] = pure • fa.getArrow
+            let f: (Int) -> [Int] = pure • fa.getArrow
 
             let lhs = pure(x) >>- f
             let rhs = f(x)
@@ -89,8 +89,8 @@ class ArraySpec: XCTestCase {
         // (m >>= f) >>= g = m >>= (\x -> f x >>= g)
         property("associativity law") <- forAll { (a: ArrayOf<Int>, fa: ArrowOf<Int, Int>, fb: ArrowOf<Int, Int>) in
             let m = a.getArray
-            let f: Int -> [Int] = pure • fa.getArrow
-            let g: Int -> [Int] = pure • fb.getArrow
+            let f: (Int) -> [Int] = pure • fa.getArrow
+            let g: (Int) -> [Int] = pure • fb.getArrow
 
             let lhs = (m >>- f) >>- g
             let rhs = m >>- { x in f(x) >>- g }
@@ -100,9 +100,9 @@ class ArraySpec: XCTestCase {
 
         // (f >=> g) >=> h = f >=> (g >=> h)
         property("left-to-right Kleisli composition of monads") <- forAll { (x: Int, fa: ArrowOf<Int, Int>, fb: ArrowOf<Int, Int>, fc: ArrowOf<Int, Int>) in
-            let f: Int -> [Int] = pure • fa.getArrow
-            let g: Int -> [Int] = pure • fb.getArrow
-            let h: Int -> [Int] = pure • fc.getArrow
+            let f: (Int) -> [Int] = pure • fa.getArrow
+            let g: (Int) -> [Int] = pure • fb.getArrow
+            let h: (Int) -> [Int] = pure • fc.getArrow
 
             let lhs = (f >-> g) >-> h
             let rhs = f >-> (g >-> h)
@@ -112,9 +112,9 @@ class ArraySpec: XCTestCase {
 
         // (f <=< g) <=< h = f <=< (g <=< h)
         property("right-to-left Kleisli composition of monads") <- forAll { (x: Int, fa: ArrowOf<Int, Int>, fb: ArrowOf<Int, Int>, fc: ArrowOf<Int, Int>) in
-            let f: Int -> [Int] = pure • fa.getArrow
-            let g: Int -> [Int] = pure • fb.getArrow
-            let h: Int -> [Int] = pure • fc.getArrow
+            let f: (Int) -> [Int] = pure • fa.getArrow
+            let g: (Int) -> [Int] = pure • fb.getArrow
+            let h: (Int) -> [Int] = pure • fc.getArrow
 
             let lhs = (f <-< g) <-< h
             let rhs = f <-< (g <-< h)
