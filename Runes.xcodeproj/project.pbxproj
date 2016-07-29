@@ -21,6 +21,9 @@
 		F802D4D81A5F218E005E236C /* Runes.h in Headers */ = {isa = PBXBuildFile; fileRef = F802D4D71A5F218E005E236C /* Runes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F802D4EF1A5F2341005E236C /* Runes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802D4EE1A5F2341005E236C /* Runes.swift */; };
 		F802D4F11A5F23BE005E236C /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802D4F01A5F23BE005E236C /* Optional.swift */; };
+		F80721571D4BE47500882F0F /* SwiftCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88DE9721BA3854E00A9D383 /* SwiftCheck.framework */; };
+		F80721581D4BE48E00882F0F /* SwiftCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88DE9741BA3855600A9D383 /* SwiftCheck.framework */; };
+		F80721591D4BE49200882F0F /* SwiftCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80D6AE61D4BE1B800505CE9 /* SwiftCheck.framework */; };
 		F80D6AD91D4BE10B00505CE9 /* ArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80D6AD51D4BE10B00505CE9 /* ArraySpec.swift */; };
 		F80D6ADA1D4BE10B00505CE9 /* ArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80D6AD51D4BE10B00505CE9 /* ArraySpec.swift */; };
 		F80D6ADB1D4BE10B00505CE9 /* ArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80D6AD51D4BE10B00505CE9 /* ArraySpec.swift */; };
@@ -38,8 +41,6 @@
 		F86B2E241A5F2B9E00C3B8BD /* Runes.h in Headers */ = {isa = PBXBuildFile; fileRef = F802D4D71A5F218E005E236C /* Runes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F86B2E251A5F2BA400C3B8BD /* Runes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802D4EE1A5F2341005E236C /* Runes.swift */; };
 		F86B2E261A5F2BA400C3B8BD /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802D4F01A5F23BE005E236C /* Optional.swift */; };
-		F88DE9731BA3854E00A9D383 /* SwiftCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88DE9721BA3854E00A9D383 /* SwiftCheck.framework */; };
-		F88DE9751BA3855600A9D383 /* SwiftCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88DE9741BA3855600A9D383 /* SwiftCheck.framework */; };
 		F89776E51BA601D500EE823E /* SwiftCheck.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F88DE9741BA3855600A9D383 /* SwiftCheck.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F89776E61BA601DE00EE823E /* SwiftCheck.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F88DE9721BA3854E00A9D383 /* SwiftCheck.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -105,6 +106,7 @@
 		F80D6AD61D4BE10B00505CE9 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		F80D6AD71D4BE10B00505CE9 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		F80D6AD81D4BE10B00505CE9 /* OptionalSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalSpec.swift; sourceTree = "<group>"; };
+		F80D6AE61D4BE1B800505CE9 /* SwiftCheck.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftCheck.framework; sourceTree = "<group>"; };
 		F8624C261A645A9600C883B3 /* Runes-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Runes-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8624C451A645C9500C883B3 /* Runes-Mac Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Runes-Mac Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F86B2E0B1A5F2B8D00C3B8BD /* Runes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Runes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51DE8A261BAB36E600124320 /* Runes.framework in Frameworks */,
+				F80721591D4BE49200882F0F /* SwiftCheck.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8624C2C1A645A9600C883B3 /* Runes.framework in Frameworks */,
-				F88DE9731BA3854E00A9D383 /* SwiftCheck.framework in Frameworks */,
+				F80721571D4BE47500882F0F /* SwiftCheck.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8624C4B1A645C9500C883B3 /* Runes.framework in Frameworks */,
-				F88DE9751BA3855600A9D383 /* SwiftCheck.framework in Frameworks */,
+				F80721581D4BE48E00882F0F /* SwiftCheck.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +229,15 @@
 			path = Runes;
 			sourceTree = "<group>";
 		};
+		F80D6AE51D4BE19E00505CE9 /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				F80D6AE61D4BE1B800505CE9 /* SwiftCheck.framework */,
+			);
+			name = tvOS;
+			path = ../Carthage/Build/tvOS;
+			sourceTree = "<group>";
+		};
 		F8624C321A645AB900C883B3 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +252,7 @@
 			children = (
 				F8624C531A645CF400C883B3 /* OS X */,
 				F8624C521A645CE200C883B3 /* iOS */,
+				F80D6AE51D4BE19E00505CE9 /* tvOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -683,6 +696,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -697,6 +714,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -888,7 +909,6 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
@@ -910,7 +930,6 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
@@ -928,7 +947,6 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
@@ -951,7 +969,6 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
