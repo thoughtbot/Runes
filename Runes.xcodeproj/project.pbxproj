@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		175219C31C3FE21100968138 /* CPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175219C21C3FE21100968138 /* CPS.swift */; };
+		175219C61C3FE86400968138 /* CPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175219C21C3FE21100968138 /* CPS.swift */; };
+		175219C71C3FE86400968138 /* CPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175219C21C3FE21100968138 /* CPS.swift */; };
+		175219C81C3FE86500968138 /* CPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175219C21C3FE21100968138 /* CPS.swift */; };
+		175219C91C3FE8BB00968138 /* CPSSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175219C41C3FE21B00968138 /* CPSSpec.swift */; };
+		175219CA1C3FE8BC00968138 /* CPSSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175219C41C3FE21B00968138 /* CPSSpec.swift */; };
+		175219CB1C3FE8BD00968138 /* CPSSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175219C41C3FE21B00968138 /* CPSSpec.swift */; };
+		175219CE1C3FE8EC00968138 /* CPSOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175219CC1C3FE8E000968138 /* CPSOf.swift */; };
+		175219CF1C3FE8ED00968138 /* CPSOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175219CC1C3FE8E000968138 /* CPSOf.swift */; };
+		175219D01C3FE8EE00968138 /* CPSOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175219CC1C3FE8E000968138 /* CPSOf.swift */; };
 		4A8C7DE81A5F58330050914C /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8C7DE71A5F58330050914C /* Array.swift */; };
 		4A8C7DE91A5F58330050914C /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8C7DE71A5F58330050914C /* Array.swift */; };
 		51D4A3C31BAB3EC800BC6AE2 /* Runes.h in Headers */ = {isa = PBXBuildFile; fileRef = F802D4D71A5F218E005E236C /* Runes.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -92,6 +102,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		175219C21C3FE21100968138 /* CPS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPS.swift; sourceTree = "<group>"; };
+		175219C41C3FE21B00968138 /* CPSSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPSSpec.swift; sourceTree = "<group>"; };
+		175219CC1C3FE8E000968138 /* CPSOf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPSOf.swift; sourceTree = "<group>"; };
 		4A8C7DE71A5F58330050914C /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		51DE8A121BAB363500124320 /* Runes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Runes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51DE8A211BAB36E600124320 /* Runes-tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Runes-tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,6 +212,7 @@
 		F802D4D41A5F218E005E236C /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				175219C21C3FE21100968138 /* CPS.swift */,
 				4A8C7DE71A5F58330050914C /* Array.swift */,
 				F802D4EE1A5F2341005E236C /* Runes.swift */,
 				F802D4F01A5F23BE005E236C /* Optional.swift */,
@@ -238,6 +252,7 @@
 		F8624C361A645AE300C883B3 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				175219C41C3FE21B00968138 /* CPSSpec.swift */,
 				F8624C371A645B0700C883B3 /* OptionalSpec.swift */,
 				F8624C5F1A647EE400C883B3 /* ArraySpec.swift */,
 			);
@@ -272,6 +287,7 @@
 		F8624C5B1A647E5500C883B3 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				175219CC1C3FE8E000968138 /* CPSOf.swift */,
 				F8624C5C1A647E6F00C883B3 /* Functions.swift */,
 				CE3407801C0E9F0A00C84170 /* Operators.swift */,
 			);
@@ -566,6 +582,7 @@
 			files = (
 				51DE8A1A1BAB36BB00124320 /* Array.swift in Sources */,
 				51DE8A1B1BAB36BB00124320 /* Runes.swift in Sources */,
+				175219C71C3FE86400968138 /* CPS.swift in Sources */,
 				51DE8A1C1BAB36BB00124320 /* Optional.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -574,6 +591,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				175219CB1C3FE8BD00968138 /* CPSSpec.swift in Sources */,
+				175219D01C3FE8EE00968138 /* CPSOf.swift in Sources */,
 				51DE8A2D1BAB373100124320 /* OptionalSpec.swift in Sources */,
 				CE3407831C0E9F0A00C84170 /* Operators.swift in Sources */,
 				51DE8A2C1BAB373100124320 /* Functions.swift in Sources */,
@@ -587,6 +606,7 @@
 			files = (
 				EAA6A5181B2F163B0058E9A8 /* Array.swift in Sources */,
 				EAA6A5191B2F163B0058E9A8 /* Runes.swift in Sources */,
+				175219C81C3FE86500968138 /* CPS.swift in Sources */,
 				EAA6A51A1B2F163B0058E9A8 /* Optional.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -597,6 +617,7 @@
 			files = (
 				F802D4EF1A5F2341005E236C /* Runes.swift in Sources */,
 				F802D4F11A5F23BE005E236C /* Optional.swift in Sources */,
+				175219C31C3FE21100968138 /* CPS.swift in Sources */,
 				4A8C7DE81A5F58330050914C /* Array.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,6 +626,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				175219C91C3FE8BB00968138 /* CPSSpec.swift in Sources */,
+				175219CE1C3FE8EC00968138 /* CPSOf.swift in Sources */,
 				F8624C381A645B0700C883B3 /* OptionalSpec.swift in Sources */,
 				CE3407811C0E9F0A00C84170 /* Operators.swift in Sources */,
 				F8624C5E1A647E7300C883B3 /* Functions.swift in Sources */,
@@ -616,6 +639,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				175219CA1C3FE8BC00968138 /* CPSSpec.swift in Sources */,
+				175219CF1C3FE8ED00968138 /* CPSOf.swift in Sources */,
 				F8624C511A645CB900C883B3 /* OptionalSpec.swift in Sources */,
 				CE3407821C0E9F0A00C84170 /* Operators.swift in Sources */,
 				F8624C5D1A647E6F00C883B3 /* Functions.swift in Sources */,
@@ -629,6 +654,7 @@
 			files = (
 				F86B2E251A5F2BA400C3B8BD /* Runes.swift in Sources */,
 				F86B2E261A5F2BA400C3B8BD /* Optional.swift in Sources */,
+				175219C61C3FE86400968138 /* CPS.swift in Sources */,
 				4A8C7DE91A5F58330050914C /* Array.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
