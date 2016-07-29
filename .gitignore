@@ -30,6 +30,10 @@ Pods
 # Carthage
 Carthage/
 
+# Swift Package Manager
+.build/
+Packages/
+
 # AppCode specific files
 .idea/
 *.iml
