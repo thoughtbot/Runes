@@ -8,7 +8,7 @@
 
     - returns: A value of type `[U]`
 */
-public func <^> <T, U>(f: @noescape (T) -> U, a: [T]) -> [U] {
+public func <^> <T, U>(f: (T) -> U, a: [T]) -> [U] {
     return a.map(f)
 }
 
@@ -64,7 +64,7 @@ public func -<< <T, U>(f: (T) -> [U], a: [T]) -> [U] {
 
     - returns: A value of type `[V]`
 */
-public func >-> <T, U, V>(f: (T) -> [U], g: (U) -> [V]) -> (T) -> [V] {
+public func >-> <T, U, V>(f: @escaping (T) -> [U], g: @escaping (U) -> [V]) -> (T) -> [V] {
     return { x in f(x) >>- g }
 }
 
@@ -78,7 +78,7 @@ public func >-> <T, U, V>(f: (T) -> [U], g: (U) -> [V]) -> (T) -> [V] {
 
     - returns: A value of type `[V]`
 */
-public func <-< <T, U, V>(f: (U) -> [V], g: (T) -> [U]) -> (T) -> [V] {
+public func <-< <T, U, V>(f: @escaping (U) -> [V], g: @escaping (T) -> [U]) -> (T) -> [V] {
     return { x in g(x) >>- f }
 }
 

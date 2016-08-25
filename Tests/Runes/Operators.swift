@@ -3,6 +3,6 @@ infix operator • {
     precedence 170
 }
 
-func • <A, B, C> (f: (B) -> C, g: (A) -> B) -> (A) -> C {
+func • <A, B, C> (f: @escaping (B) -> C, g: @escaping (A) -> B) -> (A) -> C {
     return { x in f(g(x)) }
 }

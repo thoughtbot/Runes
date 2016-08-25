@@ -9,7 +9,7 @@
 
     - returns: A value of type `Optional<U>`
 */
-public func <^> <T, U>(f: @noescape (T) -> U, a: T?) -> U? {
+public func <^> <T, U>(f: (T) -> U, a: T?) -> U? {
     return a.map(f)
 }
 
@@ -39,7 +39,7 @@ public func <*> <T, U>(f: ((T) -> U)?, a: T?) -> U? {
 
     - returns: A value of type `Optional<U>`
 */
-public func >>- <T, U>(a: T?, f: @noescape (T) -> U?) -> U? {
+public func >>- <T, U>(a: T?, f: (T) -> U?) -> U? {
     return a.flatMap(f)
 }
 
@@ -54,7 +54,7 @@ public func >>- <T, U>(a: T?, f: @noescape (T) -> U?) -> U? {
 
     - returns: A value of type `Optional<U>`
 */
-public func -<< <T, U>(f: @noescape (T) -> U?, a: T?) -> U? {
+public func -<< <T, U>(f: (T) -> U?, a: T?) -> U? {
   return a.flatMap(f)
 }
 
@@ -69,7 +69,7 @@ public func -<< <T, U>(f: @noescape (T) -> U?, a: T?) -> U? {
 
     - returns: A function from type `T` to type `Optional<V>`
 */
-public func >-> <T, U, V>(f: (T) -> U?, g: (U) -> V?) -> (T) -> V? {
+public func >-> <T, U, V>(f: @escaping (T) -> U?, g: @escaping (U) -> V?) -> (T) -> V? {
     return { x in f(x) >>- g }
 }
 
@@ -84,7 +84,7 @@ public func >-> <T, U, V>(f: (T) -> U?, g: (U) -> V?) -> (T) -> V? {
 
     - returns: A function from type `T` to type `Optional<V>`
  */
-public func <-< <T, U, V>(f: (U) -> V?, g: (T) -> U?) -> (T) -> V? {
+public func <-< <T, U, V>(f: @escaping (U) -> V?, g: @escaping (T) -> U?) -> (T) -> V? {
     return { x in g(x) >>- f }
 }
 
