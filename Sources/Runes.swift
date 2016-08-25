@@ -1,6 +1,16 @@
+precedencegroup ApplicativePrecedence {
+    associativity: left
+    higherThan: DefaultPrecedence
+}
+
+precedencegroup ApplicativeSequencePrecedence {
+    associativity: left
+    higherThan: ApplicativePrecedence
+}
+
 precedencegroup AlternativePrecedence {
     associativity: left
-    lowerThan: ComparisonPrecedence
+    higherThan: ApplicativeSequencePrecedence
 }
 
 precedencegroup MonadicPrecedenceRight {
@@ -21,7 +31,7 @@ map a function over a value with context
 Expected function type: `(a -> b) -> f a -> f b`
 Haskell `infixl 4`
 */
-infix operator <^>: ComparisonPrecedence
+infix operator <^>: ApplicativePrecedence
 
 /**
 apply a function with context to a value with context
@@ -29,7 +39,7 @@ apply a function with context to a value with context
 Expected function type: `f (a -> b) -> f a -> f b`
 Haskell `infixl 4`
 */
-infix operator <*>: ComparisonPrecedence
+infix operator <*>: ApplicativePrecedence
 
 /**
 sequence actions, discarding right (value of the second argument)
@@ -37,7 +47,7 @@ sequence actions, discarding right (value of the second argument)
 Expected function type: `f a -> f b -> f a`
 Haskell `infixl 4`
 */
-infix operator <*: ComparisonPrecedence
+infix operator <*: ApplicativeSequencePrecedence
 
 /**
 sequence actions, discarding left (value of the first argument)
@@ -45,7 +55,7 @@ sequence actions, discarding left (value of the first argument)
 Expected function type: `f a -> f b -> f b`
 Haskell `infixl 4`
 */
-infix operator *>: ComparisonPrecedence
+infix operator *>: ApplicativeSequencePrecedence
 
 /**
 an associative binary operation
