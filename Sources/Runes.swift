@@ -1,18 +1,3 @@
-precedencegroup ApplicativePrecedence {
-    associativity: left
-    higherThan: DefaultPrecedence
-}
-
-precedencegroup ApplicativeSequencePrecedence {
-    associativity: left
-    higherThan: ApplicativePrecedence
-}
-
-precedencegroup AlternativePrecedence {
-    associativity: left
-    higherThan: ApplicativeSequencePrecedence
-}
-
 precedencegroup MonadicPrecedenceRight {
     associativity: right
     lowerThan: LogicalDisjunctionPrecedence
@@ -23,6 +8,21 @@ precedencegroup MonadicPrecedenceLeft {
     associativity: left
     lowerThan: LogicalDisjunctionPrecedence
     higherThan: AssignmentPrecedence
+}
+
+precedencegroup AlternativePrecedence {
+    associativity: left
+    higherThan: MonadicPrecedenceLeft
+}
+
+precedencegroup ApplicativePrecedence {
+    associativity: left
+    higherThan: AlternativePrecedence
+}
+
+precedencegroup ApplicativeSequencePrecedence {
+    associativity: left
+    higherThan: ApplicativePrecedence
 }
 
 /**
