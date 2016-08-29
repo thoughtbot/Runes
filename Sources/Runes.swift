@@ -12,17 +12,20 @@ precedencegroup MonadicPrecedenceLeft {
 
 precedencegroup AlternativePrecedence {
     associativity: left
-    higherThan: MonadicPrecedenceLeft
+    higherThan: LogicalConjunctionPrecedence
+    lowerThan: ComparisonPrecedence
 }
 
 precedencegroup ApplicativePrecedence {
     associativity: left
     higherThan: AlternativePrecedence
+    lowerThan: NilCoalescingPrecedence
 }
 
 precedencegroup ApplicativeSequencePrecedence {
     associativity: left
     higherThan: ApplicativePrecedence
+    lowerThan: NilCoalescingPrecedence
 }
 
 /**
