@@ -1,6 +1,8 @@
+import Runes
+
 precedencegroup CompositionPrecedence {
     associativity: right
-    higherThan: BitwiseShiftPrecedence
+    higherThan: ApplicativeSequencePrecedence
 }
 
 infix operator •: CompositionPrecedence
