@@ -2,7 +2,7 @@ import Runes
 
 precedencegroup CompositionPrecedence {
     associativity: right
-    higherThan: ApplicativeSequencePrecedence
+    higherThan: RunesApplicativeSequencePrecedence
 }
 
 infix operator •: CompositionPrecedence
