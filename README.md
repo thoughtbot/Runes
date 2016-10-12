@@ -14,7 +14,7 @@ Here is the current Swift compatibility breakdown:
 
 | Swift Version | Runes Version |
 | ------------- | ------------- |
-| 3.X           | master        |
+| 3.X           | 4.X           |
 | 2.X           | 3.X           |
 | 1.2           | 1.2, 2.X      |
 | 1.1           | < 1.2         |
