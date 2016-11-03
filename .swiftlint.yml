@@ -1,6 +1,0 @@
-disabled_rules:
-  - variable_name_min_length
-included:
-excluded:
-  - Carthage
-  - Pods
