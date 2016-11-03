@@ -1,7 +1,8 @@
 /**
   map a function over an array of values
 
-  This will return a new array resulting from the transformation function being applied to each value in the array
+  This will return a new array resulting from the transformation function being
+  applied to each value in the array
 
   - parameter f: A transformation function from type `T` to type `U`
   - parameter a: A value of type `[T]`
@@ -15,7 +16,8 @@ public func <^> <T, U>(f: (T) -> U, a: [T]) -> [U] {
 /**
   apply an array of functions to an array of values
 
-  This will return a new array resulting from the matrix of each function being applied to each value in the array
+  This will return a new array resulting from the matrix of each function being
+  applied to each value in the array
 
   - parameter fs: An array of transformation functions from type `T` to type `U`
   - parameter a: A value of type `[T]`
@@ -57,7 +59,8 @@ public func -<< <T, U>(f: (T) -> [U], a: [T]) -> [U] {
 /**
   compose two functions that produce arrays of values, from left to right
 
-  produces a function that applies that flatMaps the second function over each element in the result of the first function
+  produces a function that applies that flatMaps the second function over each
+  element in the result of the first function
 
   - parameter f: A transformation function from type `T` to type `[U]`
   - parameter g: A transformation function from type `U` to type `[V]`
@@ -71,7 +74,8 @@ public func >-> <T, U, V>(f: @escaping (T) -> [U], g: @escaping (U) -> [V]) -> (
 /**
   compose two functions that produce arrays of values, from right to left
 
-  produces a function that applies that flatMaps the first function over each element in the result of the second function
+  produces a function that applies that flatMaps the first function over each
+  element in the result of the second function
 
   - parameter f: A transformation function from type `U` to type `[V]`
   - parameter g: A transformation function from type `T` to type `[U]`
@@ -97,9 +101,11 @@ public extension Array {
   /**
     apply an array of functions to `self`
 
-    This will return a new array resulting from the matrix of each function being applied to each value inside `self`
+    This will return a new array resulting from the matrix of each function
+    being applied to each value inside `self`
 
-    - parameter fs: An array of transformation functions from type `Element` to type `T`
+    - parameter fs: An array of transformation functions from type `Element` to
+                    type `T`
 
     - returns: A value of type `[T]`
   */
