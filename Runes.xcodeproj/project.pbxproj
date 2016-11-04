@@ -248,7 +248,8 @@
 				F80D6AD61D4BE10B00505CE9 /* Functions.swift */,
 				F80D6AD81D4BE10B00505CE9 /* OptionalSpec.swift */,
 			);
-			path = Runes;
+			name = Runes;
+			path = RunesTests;
 			sourceTree = "<group>";
 		};
 		F80D6AE51D4BE19E00505CE9 /* tvOS */ = {
