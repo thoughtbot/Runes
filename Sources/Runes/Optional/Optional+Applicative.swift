@@ -16,6 +16,42 @@ public func <*> <T, U>(f: ((T) -> U)?, a: T?) -> U? {
 }
 
 /**
+  Sequence two values, discarding the right hand value
+
+  - If the right hand value is `.none`, this will return `.none`
+  - If the right hand value is `.some`, this will return the left hand value
+
+  - parameter lhs: A value of type `Optional<T>`
+  - parameter rhs: A value of type `Optional<U>`
+
+  - returns: a value of type `Optional<T>`
+*/
+public func <* <T, U>(lhs: T?, rhs: U?) -> T? {
+  switch rhs {
+  case .none: return .none
+  case .some: return lhs
+  }
+}
+
+/**
+  Sequence two values, discarding the left hand value
+
+  - If the left hand value is `.none`, this will return `.none`
+  - If the left hand value is `.some`, this will return the right hand value
+
+  - parameter lhs: A value of type `Optional<T>`
+  - parameter rhs: A value of type `Optional<U>`
+
+  - returns: a value of type `Optional<U>`
+*/
+public func *> <T, U>(lhs: T?, rhs: U?) -> U? {
+  switch lhs {
+  case .none: return .none
+  case .some: return rhs
+  }
+}
+
+/**
   Wrap a value in a minimal context of `.some`
 
   - parameter a: A value of type `T`

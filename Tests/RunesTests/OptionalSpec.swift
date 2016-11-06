@@ -55,6 +55,28 @@ class OptionalSpec: XCTestCase {
       return lhs == rhs
     }
 
+    // u *> v = pure (const id) <*> u <*> v
+    property("interchange law - right sequence") <- forAll { (ou: OptionalOf<Int>, ov: OptionalOf<Int>) in
+      let u = ou.getOptional
+      let v = ov.getOptional
+
+      let lhs = u *> v
+      let rhs = pure(curry(const)(id)) <*> u <*> v
+
+      return lhs == rhs
+    }
+
+    // u <* v = pure const <*> u <*> v
+    property("interchange law - left sequence") <- forAll { (ou: OptionalOf<Int>, ov: OptionalOf<Int>) in
+      let u = ou.getOptional
+      let v = ov.getOptional
+
+      let lhs = u <* v
+      let rhs = pure(curry(const)) <*> u <*> v
+
+      return lhs == rhs
+    }
+
     // f <*> (g <*> x) = pure (.) <*> f <*> g <*> x
     property("composition law") <- forAll { (o: OptionalOf<Int>, fa: OptionalOf<ArrowOf<Int, Int>>, fb: OptionalOf<ArrowOf<Int, Int>>) in
       let x = o.getOptional

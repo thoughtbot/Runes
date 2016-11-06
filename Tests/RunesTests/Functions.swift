@@ -1,3 +1,7 @@
+func const<T, U>(x: T, y: U) -> T {
+  return x
+}
+
 func id<A>(_ a: A) -> A {
   return a
 }
