@@ -35,6 +35,10 @@
 		F89AAC971D74D04800184D08 /* Mozart.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F89AAC911D74D00E00184D08 /* Mozart.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F8D430A71D5A66A800548DF0 /* SwiftCheck.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F80D6AE61D4BE1B800505CE9 /* SwiftCheck.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F8D430A81D5A670000548DF0 /* SwiftCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80D6AE61D4BE1B800505CE9 /* SwiftCheck.framework */; };
+		F8DDC6EA1DD6754600E173E0 /* Optional+Alternative.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DDC6E91DD6754600E173E0 /* Optional+Alternative.swift */; };
+		F8DDC6EB1DD6755300E173E0 /* Optional+Alternative.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DDC6E91DD6754600E173E0 /* Optional+Alternative.swift */; };
+		F8DDC6EC1DD6755300E173E0 /* Optional+Alternative.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DDC6E91DD6754600E173E0 /* Optional+Alternative.swift */; };
+		F8DDC6ED1DD6755400E173E0 /* Optional+Alternative.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DDC6E91DD6754600E173E0 /* Optional+Alternative.swift */; };
 		F8E09D1D1DCF83F200816E60 /* Array+Applicative.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E09D151DCF83F200816E60 /* Array+Applicative.swift */; };
 		F8E09D1E1DCF83F200816E60 /* Array+Applicative.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E09D151DCF83F200816E60 /* Array+Applicative.swift */; };
 		F8E09D1F1DCF83F200816E60 /* Array+Applicative.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E09D151DCF83F200816E60 /* Array+Applicative.swift */; };
@@ -144,6 +148,7 @@
 		F89AAC8F1D74D00100184D08 /* Mozart.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mozart.framework; path = Carthage/Build/Mac/Mozart.framework; sourceTree = SOURCE_ROOT; };
 		F89AAC911D74D00E00184D08 /* Mozart.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mozart.framework; sourceTree = "<group>"; };
 		F89AAC931D74D01A00184D08 /* Mozart.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mozart.framework; path = Carthage/Build/iOS/Mozart.framework; sourceTree = SOURCE_ROOT; };
+		F8DDC6E91DD6754600E173E0 /* Optional+Alternative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Alternative.swift"; sourceTree = "<group>"; };
 		F8E09D151DCF83F200816E60 /* Array+Applicative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Applicative.swift"; sourceTree = "<group>"; };
 		F8E09D161DCF83F200816E60 /* Array+Functor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Functor.swift"; sourceTree = "<group>"; };
 		F8E09D171DCF83F200816E60 /* Array+Monad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Monad.swift"; sourceTree = "<group>"; };
@@ -340,6 +345,7 @@
 		F8E09D181DCF83F200816E60 /* Optional */ = {
 			isa = PBXGroup;
 			children = (
+				F8DDC6E91DD6754600E173E0 /* Optional+Alternative.swift */,
 				F8E09D191DCF83F200816E60 /* Optional+Applicative.swift */,
 				F8E09D1A1DCF83F200816E60 /* Optional+Functor.swift */,
 				F8E09D1B1DCF83F200816E60 /* Optional+Monad.swift */,
@@ -639,6 +645,7 @@
 				F8E09D1F1DCF83F200816E60 /* Array+Applicative.swift in Sources */,
 				F8E09D371DCF83F200816E60 /* Runes.swift in Sources */,
 				F8E09D2F1DCF83F200816E60 /* Optional+Functor.swift in Sources */,
+				F8DDC6EC1DD6755300E173E0 /* Optional+Alternative.swift in Sources */,
 				F8E09D231DCF83F200816E60 /* Array+Functor.swift in Sources */,
 				F8E09D271DCF83F200816E60 /* Array+Monad.swift in Sources */,
 			);
@@ -663,6 +670,7 @@
 				F8E09D201DCF83F200816E60 /* Array+Applicative.swift in Sources */,
 				F8E09D381DCF83F200816E60 /* Runes.swift in Sources */,
 				F8E09D301DCF83F200816E60 /* Optional+Functor.swift in Sources */,
+				F8DDC6ED1DD6755400E173E0 /* Optional+Alternative.swift in Sources */,
 				F8E09D241DCF83F200816E60 /* Array+Functor.swift in Sources */,
 				F8E09D281DCF83F200816E60 /* Array+Monad.swift in Sources */,
 			);
@@ -675,6 +683,7 @@
 				F8E09D291DCF83F200816E60 /* Optional+Applicative.swift in Sources */,
 				F8E09D311DCF83F200816E60 /* Optional+Monad.swift in Sources */,
 				F8E09D1D1DCF83F200816E60 /* Array+Applicative.swift in Sources */,
+				F8DDC6EA1DD6754600E173E0 /* Optional+Alternative.swift in Sources */,
 				F8E09D351DCF83F200816E60 /* Runes.swift in Sources */,
 				F8E09D2D1DCF83F200816E60 /* Optional+Functor.swift in Sources */,
 				F8E09D211DCF83F200816E60 /* Array+Functor.swift in Sources */,
@@ -711,6 +720,7 @@
 				F8E09D1E1DCF83F200816E60 /* Array+Applicative.swift in Sources */,
 				F8E09D361DCF83F200816E60 /* Runes.swift in Sources */,
 				F8E09D2E1DCF83F200816E60 /* Optional+Functor.swift in Sources */,
+				F8DDC6EB1DD6755300E173E0 /* Optional+Alternative.swift in Sources */,
 				F8E09D221DCF83F200816E60 /* Array+Functor.swift in Sources */,
 				F8E09D261DCF83F200816E60 /* Array+Monad.swift in Sources */,
 			);

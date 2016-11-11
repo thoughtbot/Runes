@@ -90,6 +90,29 @@ class OptionalSpec: XCTestCase {
     }
   }
 
+  func testAlternative() {
+    property("alternative operator - left empty") <- forAll { (x: Int) in
+      let lhs: Int? = empty() <|> pure(x)
+      let rhs: Int? = pure(x)
+
+      return lhs == rhs
+    }
+
+    property("alternative operator - right empty") <- forAll { (x: Int) in
+      let lhs: Int? = pure(x) <|> empty()
+      let rhs: Int? = pure(x)
+
+      return lhs == rhs
+    }
+
+    property("alternative operator - neither empty") <- forAll { (x: Int, y: Int) in
+      let lhs: Int? = pure(x) <|> pure(y)
+      let rhs: Int? = pure(x)
+
+      return lhs == rhs
+    }
+  }
+
   func testMonad() {
     // return x >>= f = f x
     property("left identity law") <- forAll { (x: Int, fa: ArrowOf<Int, Int>) in
