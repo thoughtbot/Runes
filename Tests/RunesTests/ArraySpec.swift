@@ -55,6 +55,28 @@ class ArraySpec: XCTestCase {
       return lhs == rhs
     }
 
+    // u *> v = pure (const id) <*> u <*> v
+    property("interchange law - right sequence") <- forAll { (au: ArrayOf<Int>, av: ArrayOf<Int>) in
+      let u = au.getArray
+      let v = av.getArray
+
+      let lhs: [Int] = u *> v
+      let rhs: [Int] = pure(curry(const)(id)) <*> u <*> v
+
+      return lhs == rhs
+    }
+
+    // u <* v = pure const <*> u <*> v
+    property("interchange law - left sequence") <- forAll { (au: ArrayOf<Int>, av: ArrayOf<Int>) in
+      let u = au.getArray
+      let v = av.getArray
+
+      let lhs: [Int] = u <* v
+      let rhs: [Int] = pure(curry(const)) <*> u <*> v
+
+      return lhs == rhs
+    }
+
     // f <*> (g <*> x) = pure (.) <*> f <*> g <*> x
     property("composition law") <- forAll { (a: ArrayOf<Int>, fa: ArrayOf<ArrowOf<Int, Int>>, fb: ArrayOf<ArrowOf<Int, Int>>) in
       let x = a.getArray
