@@ -25,7 +25,14 @@ correspond to common Haskell typeclasses:
 ### Applicative Functor ###
 
 - `<*>` (pronounced "apply")
+- `<*` (pronounced "left sequence")
+- `*>` (pronounced "right sequence")
 - `pure` (pronounced "pure")
+
+### Alternative ###
+
+- `<|>` (pronounced "alternate")
+- `empty` (pronounced "empty")
 
 ### Monad ###
 
@@ -45,7 +52,13 @@ public func <^> <T, U>(f: T -> U, x: T?) -> U?
 
 // Optional+Applicative:
 public func <*> <T, U>(f: (T -> U)?, x: T?) -> U?
+public func <* <T, U>(lhs: T?, rhs: U?) -> T?
+public func *> <T, U>(lhs: T?, rhs: U?) -> U?
 public func pure<T>(x: T) -> T?
+
+// Optional+Alternative:
+public func <|> <T>(lhs: T?, rhs: T?) -> T?
+public func empty<T>() -> T?
 
 // Optional+Monad:
 public func >>- <T, U>(x: T?, f: T -> U?) -> U?
@@ -58,7 +71,13 @@ public func <^> <T, U>(f: T -> U, x: [T]) -> [U]
 
 // Array+Applicative:
 public func <*> <T, U>(fs: [T -> U], x: [T]) -> [U]
+public func <* <T, U>(lhs: [T], rhs: [U]) -> [T]
+public func *> <T, U>(lhs: [T], rhs: [U]) -> [U]
 public func pure<T>(x: T) -> [T]
+
+// Array+Alternative:
+public func <|> <T>(lhs: [T], rhs: [T]) -> [T]
+public func empty<T>() -> [T]
 
 // Array+Monad:
 public func >>- <T, U>(x: [T], f: T -> [U]) -> [U]
