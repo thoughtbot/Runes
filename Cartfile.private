@@ -1,2 +1,2 @@
-github "typelift/SwiftCheck" "master"
+github "CodaFi/SwiftCheck" "four-parts-unknown"
 github "gfontenot/Mozart" ~> 1.0.0
