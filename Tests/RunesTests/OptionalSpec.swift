@@ -14,10 +14,9 @@ class OptionalSpec: XCTestCase {
     }
 
     // fmap (f . g) = (fmap f) . (fmap g)
-    property("function composition law") <- forAll { (o: OptionalOf<Int>, fa: ArrowOf<Int, Int>, fb: ArrowOf<Int, Int>) in
+    property("function composition law") <- forAll { (x: Int?, fa: ArrowOf<Int, Int>, fb: ArrowOf<Int, Int>) in
       let f = fa.getArrow
       let g = fb.getArrow
-      let x = o.getOptional
 
       let lhs = f • g <^> x
       let rhs = (curry(<^>)(f) • curry(<^>)(g))(x)
@@ -46,8 +45,8 @@ class OptionalSpec: XCTestCase {
     }
 
     // f <*> pure x = pure ($ x) <*> f
-    property("interchange law") <- forAll { (x: Int, fa: OptionalOf<ArrowOf<Int, Int>>) in
-      let f = fa.getOptional?.getArrow
+    property("interchange law") <- forAll { (x: Int, fa: ArrowOf<Int, Int>?) in
+      let f = fa?.getArrow
 
       let lhs = f <*> pure(x)
       let rhs = pure({ $0(x) }) <*> f
@@ -56,10 +55,7 @@ class OptionalSpec: XCTestCase {
     }
 
     // u *> v = pure (const id) <*> u <*> v
-    property("interchange law - right sequence") <- forAll { (ou: OptionalOf<Int>, ov: OptionalOf<Int>) in
-      let u = ou.getOptional
-      let v = ov.getOptional
-
+    property("interchange law - right sequence") <- forAll { (u: Int?, v: Int?) in
       let lhs = u *> v
       let rhs = pure(curry(const)(id)) <*> u <*> v
 
@@ -67,10 +63,7 @@ class OptionalSpec: XCTestCase {
     }
 
     // u <* v = pure const <*> u <*> v
-    property("interchange law - left sequence") <- forAll { (ou: OptionalOf<Int>, ov: OptionalOf<Int>) in
-      let u = ou.getOptional
-      let v = ov.getOptional
-
+    property("interchange law - left sequence") <- forAll { (u: Int?, v: Int?) in
       let lhs = u <* v
       let rhs = pure(curry(const)) <*> u <*> v
 
@@ -78,10 +71,9 @@ class OptionalSpec: XCTestCase {
     }
 
     // f <*> (g <*> x) = pure (.) <*> f <*> g <*> x
-    property("composition law") <- forAll { (o: OptionalOf<Int>, fa: OptionalOf<ArrowOf<Int, Int>>, fb: OptionalOf<ArrowOf<Int, Int>>) in
-      let x = o.getOptional
-      let f = fa.getOptional?.getArrow
-      let g = fb.getOptional?.getArrow
+    property("composition law") <- forAll { (x: Int?, fa: ArrowOf<Int, Int>?, fb: ArrowOf<Int, Int>?) in
+      let f = fa?.getArrow
+      let g = fb?.getArrow
 
       let lhs = f <*> (g <*> x)
       let rhs = pure(curry(•)) <*> f <*> g <*> x
@@ -125,9 +117,7 @@ class OptionalSpec: XCTestCase {
     }
 
     // m >>= return = m
-    property("right identity law") <- forAll { (o: OptionalOf<Int>) in
-      let x = o.getOptional
-
+    property("right identity law") <- forAll { (x: Int?) in
       let lhs = x >>- pure
       let rhs = x
 
@@ -135,8 +125,7 @@ class OptionalSpec: XCTestCase {
     }
 
     // (m >>= f) >>= g = m >>= (\x -> f x >>= g)
-    property("associativity law") <- forAll { (o: OptionalOf<Int>, fa: ArrowOf<Int, Int>, fb: ArrowOf<Int, Int>) in
-      let m = o.getOptional
+    property("associativity law") <- forAll { (m: Int?, fa: ArrowOf<Int, Int>, fb: ArrowOf<Int, Int>) in
       let f: (Int) -> Int? = pure • fa.getArrow
       let g: (Int) -> Int? = pure • fb.getArrow
 
