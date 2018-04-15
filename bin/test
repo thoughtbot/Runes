@@ -26,6 +26,6 @@ xcrun xcodebuild \
 xcrun xcodebuild \
   -project Runes.xcodeproj \
   -scheme Runes-tvOS \
-  -destination "platform=tvOS Simulator,name=Apple TV 1080p" \
+  -destination "platform=tvOS Simulator,name=Apple TV" \
   test \
   | xcpretty --color
