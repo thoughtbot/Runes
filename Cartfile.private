@@ -1,2 +1,2 @@
-github "typelift/SwiftCheck" "master"
+github "typelift/SwiftCheck" ~> 0.10.0
 github "gfontenot/Mozart" ~> 1.0.0

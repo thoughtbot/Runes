@@ -1,2 +1,2 @@
 github "gfontenot/Mozart" "v1.0.1"
-github "typelift/SwiftCheck" "e30300f5d4c212349b5bc01608820e7d810ea457"
+github "typelift/SwiftCheck" "0.10.0"
