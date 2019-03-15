@@ -4,7 +4,20 @@ import PackageDescription
 
 let package = Package(
   name: "Runes",
-  products: [.library(name: "Runes", targets: ["Runes"])],
-  dependencies: [],
-  targets: [.target(name: "Runes", dependencies: [], path: "Sources")]
+  products: [
+    .library(name: "Runes", targets: ["Runes"])
+  ],
+  dependencies: [
+    .package(url: "git@github.com:CodaFi/SwiftCheck.git", .branch("fivel"))
+  ],
+  targets: [
+    .target(name: "Runes"),
+    .testTarget(
+      name: "RunesTests",
+      dependencies: [
+        "Runes",
+        "SwiftCheck",
+      ]
+    ),
+  ]
 )
