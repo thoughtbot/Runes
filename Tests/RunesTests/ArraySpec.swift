@@ -1,6 +1,5 @@
 import XCTest
 import SwiftCheck
-import Mozart
 import Runes
 
 class ArraySpec: XCTestCase {

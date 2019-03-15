@@ -27,12 +27,6 @@
 		F86B2E241A5F2B9E00C3B8BD /* Runes.h in Headers */ = {isa = PBXBuildFile; fileRef = F802D4D71A5F218E005E236C /* Runes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F89776E51BA601D500EE823E /* SwiftCheck.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F88DE9741BA3855600A9D383 /* SwiftCheck.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F89776E61BA601DE00EE823E /* SwiftCheck.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F88DE9721BA3854E00A9D383 /* SwiftCheck.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F89AAC901D74D00100184D08 /* Mozart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89AAC8F1D74D00100184D08 /* Mozart.framework */; };
-		F89AAC921D74D00E00184D08 /* Mozart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89AAC911D74D00E00184D08 /* Mozart.framework */; };
-		F89AAC941D74D01A00184D08 /* Mozart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89AAC931D74D01A00184D08 /* Mozart.framework */; };
-		F89AAC951D74D03C00184D08 /* Mozart.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F89AAC931D74D01A00184D08 /* Mozart.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F89AAC961D74D04300184D08 /* Mozart.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F89AAC8F1D74D00100184D08 /* Mozart.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F89AAC971D74D04800184D08 /* Mozart.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F89AAC911D74D00E00184D08 /* Mozart.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F8D430A71D5A66A800548DF0 /* SwiftCheck.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F80D6AE61D4BE1B800505CE9 /* SwiftCheck.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F8D430A81D5A670000548DF0 /* SwiftCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80D6AE61D4BE1B800505CE9 /* SwiftCheck.framework */; };
 		F8DDC6EA1DD6754600E173E0 /* Optional+Alternative.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DDC6E91DD6754600E173E0 /* Optional+Alternative.swift */; };
@@ -104,7 +98,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F89AAC951D74D03C00184D08 /* Mozart.framework in CopyFiles */,
 				F89776E61BA601DE00EE823E /* SwiftCheck.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,7 +108,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F89AAC961D74D04300184D08 /* Mozart.framework in CopyFiles */,
 				F89776E51BA601D500EE823E /* SwiftCheck.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,7 +118,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F89AAC971D74D04800184D08 /* Mozart.framework in CopyFiles */,
 				F8D430A71D5A66A800548DF0 /* SwiftCheck.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,9 +140,6 @@
 		F86B2E0B1A5F2B8D00C3B8BD /* Runes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Runes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F88DE9721BA3854E00A9D383 /* SwiftCheck.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftCheck.framework; path = Carthage/Build/iOS/SwiftCheck.framework; sourceTree = SOURCE_ROOT; };
 		F88DE9741BA3855600A9D383 /* SwiftCheck.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftCheck.framework; path = Carthage/Build/Mac/SwiftCheck.framework; sourceTree = SOURCE_ROOT; };
-		F89AAC8F1D74D00100184D08 /* Mozart.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mozart.framework; path = Carthage/Build/Mac/Mozart.framework; sourceTree = SOURCE_ROOT; };
-		F89AAC911D74D00E00184D08 /* Mozart.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mozart.framework; sourceTree = "<group>"; };
-		F89AAC931D74D01A00184D08 /* Mozart.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mozart.framework; path = Carthage/Build/iOS/Mozart.framework; sourceTree = SOURCE_ROOT; };
 		F8DDC6E91DD6754600E173E0 /* Optional+Alternative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Alternative.swift"; sourceTree = "<group>"; };
 		F8DDC6EE1DD67D2600E173E0 /* Array+Alternative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Alternative.swift"; sourceTree = "<group>"; };
 		F8E09D151DCF83F200816E60 /* Array+Applicative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Applicative.swift"; sourceTree = "<group>"; };
@@ -177,7 +165,6 @@
 			files = (
 				51DE8A261BAB36E600124320 /* Runes.framework in Frameworks */,
 				F8D430A81D5A670000548DF0 /* SwiftCheck.framework in Frameworks */,
-				F89AAC921D74D00E00184D08 /* Mozart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +188,6 @@
 			files = (
 				F8624C2C1A645A9600C883B3 /* Runes.framework in Frameworks */,
 				F80721571D4BE47500882F0F /* SwiftCheck.framework in Frameworks */,
-				F89AAC941D74D01A00184D08 /* Mozart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +197,6 @@
 			files = (
 				F8624C4B1A645C9500C883B3 /* Runes.framework in Frameworks */,
 				F80721581D4BE48E00882F0F /* SwiftCheck.framework in Frameworks */,
-				F89AAC901D74D00100184D08 /* Mozart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +260,6 @@
 		F80D6AE51D4BE19E00505CE9 /* tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				F89AAC911D74D00E00184D08 /* Mozart.framework */,
 				F80D6AE61D4BE1B800505CE9 /* SwiftCheck.framework */,
 			);
 			name = tvOS;
@@ -304,7 +288,6 @@
 		F8624C521A645CE200C883B3 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				F89AAC931D74D01A00184D08 /* Mozart.framework */,
 				F88DE9721BA3854E00A9D383 /* SwiftCheck.framework */,
 			);
 			name = iOS;
@@ -313,7 +296,6 @@
 		F8624C531A645CF400C883B3 /* OS X */ = {
 			isa = PBXGroup;
 			children = (
-				F89AAC8F1D74D00100184D08 /* Mozart.framework */,
 				F88DE9741BA3855600A9D383 /* SwiftCheck.framework */,
 			);
 			name = "OS X";
