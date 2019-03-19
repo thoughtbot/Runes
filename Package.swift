@@ -7,17 +7,7 @@ let package = Package(
   products: [
     .library(name: "Runes", targets: ["Runes"])
   ],
-  dependencies: [
-    .package(url: "git@github.com:CodaFi/SwiftCheck.git", .branch("fivel"))
-  ],
   targets: [
     .target(name: "Runes"),
-    .testTarget(
-      name: "RunesTests",
-      dependencies: [
-        "Runes",
-        "SwiftCheck",
-      ]
-    ),
   ]
 )
