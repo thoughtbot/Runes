@@ -1,1 +1,1 @@
-github "CodaFi/SwiftCheck" "fivel"
+github "typelift/SwiftCheck" ~> 0.12
