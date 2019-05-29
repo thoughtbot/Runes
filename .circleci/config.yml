@@ -3,22 +3,18 @@ version: 2
 jobs:
   build-and-test:
     macos:
-      xcode: "9.3.0"
+      xcode: "10.2.0"
 
     steps:
       - checkout
       - restore_cache:
-          key: dependency-cache-{{ checksum "Cartfile.resolved" }}
-      - run:
-          name: Install Carthage Dependencies
-          command: bin/carthage-bootstrap-if-needed
+          key: dependency-cache-{{ checksum "Package.resolved" }}
+      - run: swift build
       - save_cache:
-          key: dependency-cache-{{ checksum "Cartfile.resolved" }}
+          key: dependency-cache-{{ checksum "Package.resolved" }}
           paths:
-            - Carthage
-      - run:
-          name: Build and Test
-          command: bin/test
+            - .build
+      - run: swift test
 
 workflows:
   version: 2
