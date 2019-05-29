@@ -11,7 +11,7 @@
   - returns: a value of type `Optional<T>`
 */
 public func <|> <T>(lhs: T?, rhs: @autoclosure () -> T?) -> T? {
-  return lhs.or(rhs)
+  return lhs.or(rhs())
 }
 
 /**
