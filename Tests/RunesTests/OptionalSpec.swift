@@ -6,7 +6,9 @@ class OptionalSpec: XCTestCase {
   func testFunctor() {
     // fmap id = id
     property("identity law") <- forAll { (x: Int?) in
-      let lhs = id <^> x
+      let identity: (Int) -> Int = id
+
+      let lhs = identity <^> x
       let rhs = x
 
       return lhs == rhs
@@ -27,7 +29,9 @@ class OptionalSpec: XCTestCase {
   func testApplicative() {
     // pure id <*> v = v
     property("identity law") <- forAll { (x: Int?) in
-      let lhs = pure(id) <*> x
+      let identity: (Int) -> Int = id
+
+      let lhs = pure(identity) <*> x
       let rhs = x
 
       return lhs == rhs
@@ -55,8 +59,10 @@ class OptionalSpec: XCTestCase {
 
     // u *> v = pure (const id) <*> u <*> v
     property("interchange law - right sequence") <- forAll { (u: Int?, v: Int?) in
+      let identity: (Int) -> Int = id
+
       let lhs = u *> v
-      let rhs = pure(curry(const)(id)) <*> u <*> v
+      let rhs = pure(curry(const)(identity)) <*> u <*> v
 
       return lhs == rhs
     }

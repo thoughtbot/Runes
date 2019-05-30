@@ -6,7 +6,9 @@ class ArraySpec: XCTestCase {
   func testFunctor() {
     // fmap id = id
     property("identity law") <- forAll { (xs: [Int]) in
-      let lhs = id <^> xs
+      let identity: (Int) -> Int = id
+
+      let lhs = identity <^> xs
       let rhs = xs
 
       return lhs == rhs
@@ -27,7 +29,9 @@ class ArraySpec: XCTestCase {
   func testApplicative() {
     // pure id <*> x = x
     property("identity law") <- forAll { (xs: [Int]) in
-      let lhs = pure(id) <*> xs
+      let identity: (Int) -> Int = id
+
+      let lhs = pure(identity) <*> xs
       let rhs = xs
 
       return lhs == rhs
@@ -55,8 +59,10 @@ class ArraySpec: XCTestCase {
 
     // u *> v = pure (const id) <*> u <*> v
     property("interchange law - right sequence") <- forAll { (u: [Int], v: [Int]) in
+      let identity: (Int) -> Int = id
+
       let lhs: [Int] = u *> v
-      let rhs: [Int] = pure(curry(const)(id)) <*> u <*> v
+      let rhs: [Int] = pure(curry(const)(identity)) <*> u <*> v
 
       return lhs == rhs
     }
