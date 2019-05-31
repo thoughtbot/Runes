@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'Runes'
-  spec.version = '4.2.2'
+  spec.version = '5.0.0'
   spec.swift_versions = ['5.0']
   spec.summary = 'Functional operators for Swift'
   spec.homepage = 'https://github.com/thoughtbot/runes'
