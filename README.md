@@ -84,6 +84,24 @@ public func >>- <T, U>(x: [T], f: T -> [U]) -> [U]
 public func -<< <T, U>(f: T -> [U], x: [T]) -> [U]
 public func >-> <T, U, V>(f: T -> [U], g: U -> [V]) -> T -> [V]
 public func <-< <T, U, V>(f: U -> [V], g: T -> [U]) -> T -> [V]
+
+// Result+Functor:
+public func <^> <T, U, E>(f: (T) -> U, a: Result<T, E>) -> Result<U, E>
+
+// Optional+Applicative:
+public func <*> <T, U, E>(f: Result<(T) -> U, E>, a: Result<T, E>) -> Result<U, E>
+public func <* <T, U, E>(lhs: Result<T, E>, rhs: Result<U, E>) -> Result<T, E>
+public func *> <T, U, E>(lhs: Result<T, E>, rhs: Result<U, E>) -> Result<U, E>
+public func pure<T, E>(_ a: T) -> Result<T, E>
+
+// Optional+Alternative:
+public func <|> <T, E>(lhs: Result<T, E>, rhs: @autoclosure () -> Result<T, E>) -> Result<T, E>
+
+// Optional+Monad:
+public func >>- <T, U, E>(a: Result<T, E>, f: (T) -> Result<U, E>) -> Result<U, E>
+public func -<< <T, U, E>(f: (T) -> Result<U, E>, a: Result<T, E>) -> Result<U, E>
+public func >-> <T, U, V, E>(f: @escaping (T) -> Result<U, E>, g: @escaping (U) -> Result<V, E>) -> (T) -> Result<V, E>
+public func <-< <T, U, V, E>(f: @escaping (U) -> Result<V, E>, g: @escaping (T) -> Result<U, E>) -> (T) -> Result<V, E>
 ```
 
 ## Contributing ##
