@@ -88,16 +88,16 @@ public func <-< <T, U, V>(f: U -> [V], g: T -> [U]) -> T -> [V]
 // Result+Functor:
 public func <^> <T, U, E>(f: (T) -> U, a: Result<T, E>) -> Result<U, E>
 
-// Optional+Applicative:
+// Result+Applicative:
 public func <*> <T, U, E>(f: Result<(T) -> U, E>, a: Result<T, E>) -> Result<U, E>
 public func <* <T, U, E>(lhs: Result<T, E>, rhs: Result<U, E>) -> Result<T, E>
 public func *> <T, U, E>(lhs: Result<T, E>, rhs: Result<U, E>) -> Result<U, E>
 public func pure<T, E>(_ a: T) -> Result<T, E>
 
-// Optional+Alternative:
+// Result+Alternative:
 public func <|> <T, E>(lhs: Result<T, E>, rhs: @autoclosure () -> Result<T, E>) -> Result<T, E>
 
-// Optional+Monad:
+// Result+Monad:
 public func >>- <T, U, E>(a: Result<T, E>, f: (T) -> Result<U, E>) -> Result<U, E>
 public func -<< <T, U, E>(f: (T) -> Result<U, E>, a: Result<T, E>) -> Result<U, E>
 public func >-> <T, U, V, E>(f: @escaping (T) -> Result<U, E>, g: @escaping (U) -> Result<V, E>) -> (T) -> Result<V, E>
