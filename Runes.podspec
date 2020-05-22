@@ -6,7 +6,7 @@ Pod::Spec.new do |spec|
   spec.homepage = 'https://github.com/thoughtbot/runes'
   spec.license = { :type => 'MIT', :file => 'LICENSE' }
   spec.author = {
-    'Gordon Fontenot' => 'gordon@thoughtbot.com',
+    'Gordon Fontenot' => 'gordon@fonten.io',
     'thoughtbot' => nil,
   }
   spec.social_media_url = 'http://twitter.com/thoughtbot'
